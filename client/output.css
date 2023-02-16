@@ -563,16 +563,24 @@ video {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[100px\] {
   height: 100px;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-full {
   width: 100%;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .select-none {
@@ -764,6 +772,12 @@ video {
 
 .book-modal-info-div{
   border: 2px solid green;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .course-modal{
@@ -971,6 +985,44 @@ video {
 
 .student-modal-info-div{
   border: 2px solid green;
+}
+
+.div-for-books-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  gap: 55px;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+}
+
+#div-for-books-label{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.div-for-courses-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-items: center;
+  gap: 55px;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+}
+
+#div-for-courses-label{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
 }
 
 /* border-teal-500 

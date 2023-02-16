@@ -17,7 +17,7 @@
 
 
     -webkit-box-shadow: 5px 5px 15px 5px #585959; 
-box-shadow: 5px 5px 15px 5px #585959;
+    box-shadow: 5px 5px 15px 5px #585959;
 }
 
 
@@ -83,6 +83,12 @@ box-shadow: 5px 5px 15px 5px #585959;
 .book-modal-info-div{
 
     border: 2px solid green;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -337,6 +343,51 @@ box-shadow: 5px 5px 15px 5px #585959;
 
     border: 2px solid green;
 
+}
+
+
+.div-for-books-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    gap: 55px;
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+    
+}
+
+#div-for-books-label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+
+.div-for-courses-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    gap: 55px;
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+    
+}
+
+#div-for-courses-label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    
 }
 
 /* border-teal-500 
