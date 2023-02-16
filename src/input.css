@@ -1,3 +1,350 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.book-modal{
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid green; */
+    border-radius: 20px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 50px;
+
+
+    -webkit-box-shadow: 5px 5px 15px 5px #585959; 
+box-shadow: 5px 5px 15px 5px #585959;
+}
+
+
+#book-modal-btn-div{
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.book-modal-edit-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.book-modal-del-btn {
+    background-color: rgb(138, 23, 167);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.book-modal-img-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-top: 20px; */
+    color: white;
+}
+
+
+
+#book-logo {
+    width: 75px;
+}
+
+.book-modal-info-div{
+
+    border: 2px solid green;
+
+}
+
+
+.course-modal{
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid green; */
+    border-radius: 20px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 50px;
+
+
+    -webkit-box-shadow: 5px 5px 15px 5px #585959; 
+box-shadow: 5px 5px 15px 5px #585959;
+}
+
+
+#course-modal-btn-div{
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.course-modal-edit-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.course-modal-del-btn {
+    background-color: rgb(138, 23, 167);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.course-modal-img-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-top: 20px; */
+    color: white;
+}
+
+
+
+#course-logo {
+    width: 75px;
+}
+
+.course-modal-info-div{
+
+    border: 2px solid green;
+
+}
+
+
+
+.enrollment-modal{
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid green; */
+    border-radius: 20px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 50px;
+
+
+    -webkit-box-shadow: 5px 5px 15px 5px #585959; 
+box-shadow: 5px 5px 15px 5px #585959;
+}
+
+
+#enrollment-modal-btn-div{
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.enrollment-modal-edit-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.enrollment-modal-del-btn {
+    background-color: rgb(138, 23, 167);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.enrollment-modal-img-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-top: 20px; */
+    color: white;
+}
+
+
+
+#enrollment-logo {
+    width: 75px;
+}
+
+.enrollment-modal-info-div{
+
+    border: 2px solid green;
+
+}
+
+
+
+
+
+.student-modal{
+    width: 350px;
+    height: 200px;
+    /* border: 2px solid green; */
+    border-radius: 20px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-top: 50px;
+
+
+    -webkit-box-shadow: 5px 5px 15px 5px #585959; 
+box-shadow: 5px 5px 15px 5px #585959;
+}
+
+
+#student-modal-btn-div{
+    /* border: 2px solid red; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.student-modal-edit-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.student-modal-del-btn {
+    background-color: rgb(138, 23, 167);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
+.student-modal-img-div {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding-top: 20px; */
+    color: white;
+}
+
+
+
+#student-logo {
+    width: 75px;
+}
+
+.student-modal-info-div{
+
+    border: 2px solid green;
+
+}
+
+/* border-teal-500 
+bg-teal-500 
+text-white 
+rounded-md 
+px-4 py-2 m-2 
+transition duration-500 
+ease select-none hover:bg-teal-600 
+focus:outline-none 
+focus:shadow-outline */
