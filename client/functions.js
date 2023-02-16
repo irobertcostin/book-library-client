@@ -39,7 +39,7 @@ function navbar(){
 function loginTab(){
 
     let text = `
-    <div class="w-full  flex flex-row flex-nowrap justify-center items-center md:justify-end">
+    <div class="w-full hidden  flex flex-row flex-nowrap justify-center items-center md:justify-end">
     <button type="button"
         class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
         Login
@@ -50,40 +50,49 @@ function loginTab(){
     </button>
 </div>`
 
+return text;
 
 }
 
 
 
 // books
+
+
 function divForBooks(){
+
+    
 
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("div-for-books");
 
     let label = document.createElement("p");
     label.textContent="Books"
+    label.id="div-for-books-label"
     mainDiv.appendChild(label);
     
     let secondDiv = document.createElement("div");
     secondDiv.classList.add("div-for-books-content")
     mainDiv.appendChild(secondDiv)
 
+    
 
     return mainDiv;
 
 }
 
+
 function bookModal(obj){
 
     
+
     // book_name
     // created_at
 
     // main container
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("book-modal");
-    // mainDiv.id = obj.id
+    mainDiv.id = obj.id
 
 
     // div for buttons
@@ -126,17 +135,30 @@ function bookModal(obj){
     let bookName = document.createElement("p");
     secondDiv.appendChild(bookName);
     bookName.id="book-name"
-    // fullName.textContent = obj.full_name;
+    bookName.textContent ="Name: "+ obj.book_name;
 
     let createdAt = document.createElement("p");
     secondDiv.appendChild(createdAt);
     createdAt.id="book-creation-date"
-    // model.textContent = obj.last_name;
-
-
-
+    createdAt.textContent ="Created at: "+ obj.created_at;
 
     return mainDiv;
+}
+
+
+async function populateDivForBooks(){
+
+    let divForBooks=document.querySelector(".div-for-books-content")
+
+
+    let response = await getBooksApi();
+    
+
+    for(i=0;i<response.books.length;i++){
+        // console.log(response.books[i]);
+        divForBooks.appendChild(bookModal(response.books[i]));
+    }
+
 }
 
 
@@ -150,11 +172,13 @@ function divForCourses(){
 
     let label = document.createElement("p");
     label.textContent="Courses"
+    label.id="div-for-courses-label"
     mainDiv.appendChild(label);
     
     let secondDiv = document.createElement("div");
     secondDiv.classList.add("div-for-courses-content")
     mainDiv.appendChild(secondDiv)
+
 
 
     return mainDiv;
@@ -224,6 +248,21 @@ function courseModal(obj){
 
 
     return mainDiv;
+}
+
+async function populateDivForCourses(){
+
+    let divForCourses=document.querySelector(".div-for-courses-content")
+
+
+    let response = await getCoursesApi();
+    
+
+    for(i=0;i<response.courses.length;i++){
+        // console.log(response.books[i]);
+        divForCourses.appendChild(courseModal(response.courses[i]));
+    }
+
 }
 
 
@@ -440,10 +479,5 @@ function studentModal(obj){
 
 
 
-let main = document.querySelector(".navbar-parent");
-main.innerHTML=navbar();
-main.appendChild(bookModal())
-main.appendChild(courseModal());
-main.appendChild(enrollmentModal());
-main.appendChild(studentModal());
+
 // main.removeChild(document.querySelector(".navbar"))
