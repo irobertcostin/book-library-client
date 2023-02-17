@@ -82,7 +82,7 @@
 
 .book-modal-info-div{
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
     color: white;
     display: flex;
     flex-direction: column;
@@ -171,8 +171,13 @@ box-shadow: 5px 5px 15px 5px #585959;
 
 .course-modal-info-div{
 
-    border: 2px solid green;
-
+    /* border: 2px solid green; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -255,7 +260,13 @@ box-shadow: 5px 5px 15px 5px #585959;
 
 .enrollment-modal-info-div{
 
-    border: 2px solid green;
+
+     color: white;
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     justify-content: center;
+     align-items: center;
 
 }
 
@@ -341,7 +352,13 @@ box-shadow: 5px 5px 15px 5px #585959;
 
 .student-modal-info-div{
 
-    border: 2px solid green;
+    /* border: 2px solid green; */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -389,6 +406,57 @@ box-shadow: 5px 5px 15px 5px #585959;
     padding: 20px;
     
 }
+
+
+
+.div-for-enrollments-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    gap: 55px;
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+    
+}
+
+#div-for-enrollments-label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+
+
+.div-for-students-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    gap: 55px;
+    padding: 20px;
+
+    height: auto;
+    width: 100%;
+    
+}
+
+#div-for-students-label{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    
+}
+
+
+
+
 
 /* border-teal-500 
 bg-teal-500 

@@ -1,29 +1,33 @@
 function navbar(){
 
     
-    let text = `<div class=" navbar  h-[100px] w-full bg-transparent flex flex-row items-center relative flex-wrap justify-between text-xs lg:text-xl md:flex-nowrap">
+    let text = `<div class=" navbar mt-16  h-[100px] w-full bg-transparent flex flex-row items-center relative flex-wrap justify-between text-xs lg:text-xl md:flex-nowrap md:mt-8 lg:-mt-2">
 
-    <div class=" w-full  flex flex-row flex-nowrap items-center justify-center md:justify-start">
+    <div class=" w-full  flex flex-row flex-nowrap items-center justify-center">
         <button type="button"
-            class="border  border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+            class=" students-btn border  border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-teal-600 focus:outline-none focus:shadow-outline">
             Students
         </button>
 
         <button type="button"
-            class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+            class=" books-btn border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
             Books
         </button>
 
         <button type="button"
-            class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+            class="courses-btn border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
             Courses
         </button>
 
         <button type="button"
-            class="border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+            class="enrolls-btn border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
             Enrollments
         </button>
     </div>
+
+
+    
+
 
 
 
@@ -39,9 +43,9 @@ function navbar(){
 function loginTab(){
 
     let text = `
-    <div class="w-full hidden  flex flex-row flex-nowrap justify-center items-center md:justify-end">
+    <div class="w-full    flex flex-row flex-nowrap pt-10  justify-end items-center text-xs lg:text-xl md:flex-nowrap ">
     <button type="button"
-        class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
+        class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-red-600 focus:outline-none focus:shadow-outline">
         Login
     </button>
     <button type="button"
@@ -53,6 +57,7 @@ function loginTab(){
 return text;
 
 }
+
 
 
 
@@ -194,7 +199,7 @@ function courseModal(obj){
     // main container
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("course-modal");
-    // mainDiv.id = obj.id
+    mainDiv.id = obj.id
 
 
     // div for buttons
@@ -237,12 +242,12 @@ function courseModal(obj){
     let courseName = document.createElement("p");
     secondDiv.appendChild(courseName);
     courseName.id="course-name"
-    // fullName.textContent = obj.name;
+    courseName.textContent = obj.name;
 
     let department = document.createElement("p");
     secondDiv.appendChild(department);
     department.id="course-creation-date"
-    // model.textContent = obj.department;
+    department.textContent = obj.department;
 
 
 
@@ -276,6 +281,7 @@ function divForEnrollments(){
 
     let label = document.createElement("p");
     label.textContent="Enrollments"
+    label.id="div-for-enrollments-label"
     mainDiv.appendChild(label);
     
     let secondDiv = document.createElement("div");
@@ -357,6 +363,21 @@ function enrollmentModal(obj){
     return mainDiv;
 }
 
+async function populateDivForEnrollments(){
+
+    let divForCourses=document.querySelector(".div-for-courses-content")
+
+
+    let response = await getEnrollmentsApi();
+    
+
+    for(i=0;i<response.courses.length;i++){
+        // console.log(response.books[i]);
+        divForCourses.appendChild(courseModal(response.courses[i]));
+    }
+
+}
+
 
 
 
@@ -369,6 +390,7 @@ function divForStudents(){
 
     let label = document.createElement("p");
     label.textContent="Students"
+    label.id="div-for-students-label"
     mainDiv.appendChild(label);
     
     let secondDiv = document.createElement("div");
