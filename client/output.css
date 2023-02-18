@@ -555,60 +555,12 @@ video {
   position: relative;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.-top-\[50px\] {
-  top: -50px;
-}
-
-.-top-\[40px\] {
-  top: -40px;
-}
-
-.-left-4 {
-  left: -1rem;
-}
-
-.-left-8 {
-  left: -2rem;
-}
-
-.-top-\[20px\] {
-  top: -20px;
-}
-
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-8 {
-  top: 2rem;
-}
-
-.top-12 {
-  top: 3rem;
-}
-
-.-top-12 {
-  top: -3rem;
-}
-
-.-top-16 {
-  top: -4rem;
-}
-
-.-left-16 {
-  left: -4rem;
-}
-
 .-left-12 {
   left: -3rem;
 }
 
-.top-5 {
-  top: 1.25rem;
+.-top-12 {
+  top: -3rem;
 }
 
 .m-0 {
@@ -619,32 +571,12 @@ video {
   margin: 0.5rem;
 }
 
-.mt-56 {
-  margin-top: 14rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-16 {
   margin-top: 4rem;
 }
 
 .flex {
   display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-\[100px\] {
@@ -655,32 +587,12 @@ video {
   min-height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-\[50px\] {
-  width: 50px;
-}
-
-.w-\[70px\] {
-  width: 70px;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[200px\] {
-  width: 200px;
-}
-
 .w-\[250px\] {
   width: 250px;
 }
 
-.w-\[300px\] {
-  width: 300px;
+.w-full {
+  width: 100%;
 }
 
 .transform {
@@ -791,10 +703,6 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.pt-20 {
-  padding-top: 5rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -830,7 +738,9 @@ video {
   display: grid;
   grid-template-columns: 30% 70%;
   padding-top: 50px;
-  box-shadow: 5px 5px 15px 5px #585959;
+  margin: auto;
+  background-color: rgb(10, 0, 65);
+  box-shadow: 5px 5px 15px 5px #03ffff72;
 }
 
 #book-modal-btn-div{
@@ -902,10 +812,12 @@ video {
   /* border: 2px solid green; */
   border-radius: 20px;
   position: relative;
+  margin: auto;
+  background-color: rgb(33, 13, 63);
   display: grid;
   grid-template-columns: 30% 70%;
   padding-top: 50px;
-  box-shadow: 5px 5px 15px 5px #585959;
+  box-shadow: 5px 5px 15px 5px #00ffff7e;
 }
 
 #course-modal-btn-div{
@@ -977,10 +889,12 @@ video {
   /* border: 2px solid green; */
   border-radius: 20px;
   position: relative;
+  margin: auto;
   display: grid;
   grid-template-columns: 30% 70%;
   padding-top: 50px;
-  box-shadow: 5px 5px 15px 5px #585959;
+  background-color: rgba(54, 0, 79, 0.585);
+  box-shadow: 5px 5px 15px 5px #00ffff84;
 }
 
 #enrollment-modal-btn-div{
@@ -1054,6 +968,7 @@ video {
   display: grid;
   grid-template-columns: 30% 70%;
   padding-top: 50px;
+  margin: auto;
   box-shadow: 5px 5px 15px 5px #585959;
 }
 
@@ -1222,40 +1137,16 @@ focus:shadow-outline */
 }
 
 @media (min-width: 768px) {
-  .md\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .md\:mt-8 {
     margin-top: 2rem;
-  }
-
-  .md\:mt-0 {
-    margin-top: 0px;
   }
 
   .md\:flex-nowrap {
     flex-wrap: nowrap;
   }
-
-  .md\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .md\:justify-end {
-    justify-content: flex-end;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .lg\:-mt-8 {
-    margin-top: -2rem;
-  }
-
   .lg\:-mt-2 {
     margin-top: -0.5rem;
   }
