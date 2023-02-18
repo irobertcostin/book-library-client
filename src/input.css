@@ -18,8 +18,8 @@
 
     background-color: rgb(10, 0, 65);
 
-    -webkit-box-shadow: 5px 5px 15px 5px #03ffff9c; 
-    box-shadow: 5px 5px 15px 5px #03ffff72;
+    -webkit-box-shadow: 2px 2px 6px 2px #03ffff9c; 
+    box-shadow: 2px 2px 6px 2px #03ffff72;
 }
 
 
@@ -109,8 +109,8 @@
     padding-top: 50px;
 
 
-    -webkit-box-shadow: 5px 5px 15px 5px #00ffff84; 
-box-shadow: 5px 5px 15px 5px #00ffff7e;
+    -webkit-box-shadow: 2px 2px 6px 2px #00ffff84; 
+box-shadow: 2px 2px 6px 2px #00ffff7e;
 }
 
 
@@ -201,10 +201,10 @@ box-shadow: 5px 5px 15px 5px #00ffff7e;
     grid-template-columns: 30% 70%;
     padding-top: 50px;
 
-    background-color: rgba(54, 0, 79, 0.585);
+    background-color: rgba(12, 1, 98, 0.507);
 
-    -webkit-box-shadow: 5px 5px 15px 5px #00ffff84; 
-box-shadow: 5px 5px 15px 5px #00ffff84;
+    -webkit-box-shadow: 2px 2px 6px 2px #00ffff84; 
+box-shadow: 2px 2px 6px 2px #00ffff84;
 }
 
 
@@ -279,8 +279,36 @@ box-shadow: 5px 5px 15px 5px #00ffff84;
 
 }
 
+.logo img {
+    cursor: pointer;
+
+}
+
+.namediv-modal-info-div{
+
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
 
 
+}
+
+#student-last-name{
+width: 100%;
+display: flex;
+align-items: center;
+
+}
+#student-first-name{
+    width: 100%;
+    display: flex;
+align-items: center;
+justify-content: flex-end;
+}
 
 
 .student-modal{
@@ -294,10 +322,10 @@ box-shadow: 5px 5px 15px 5px #00ffff84;
     grid-template-columns: 30% 70%;
     padding-top: 50px;
     margin: auto;
+    background-color: #001b55b8;
 
-
-    -webkit-box-shadow: 5px 5px 15px 5px #585959; 
-box-shadow: 5px 5px 15px 5px #585959;
+    -webkit-box-shadow: 2px 2px 6px 2px #03ffff83; 
+box-shadow: 2px 2px 6px 2px #03ffff70;
 }
 
 
@@ -388,7 +416,7 @@ box-shadow: 5px 5px 15px 5px #585959;
 }
 
 #div-for-books-label{
-    color: white;
+    color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
@@ -410,7 +438,7 @@ box-shadow: 5px 5px 15px 5px #585959;
 }
 
 #div-for-courses-label{
-    color: white;
+    color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
@@ -434,7 +462,7 @@ box-shadow: 5px 5px 15px 5px #585959;
 }
 
 #div-for-enrollments-label{
-    color: white;
+    color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
@@ -454,19 +482,60 @@ box-shadow: 5px 5px 15px 5px #585959;
     height: auto;
     width: 100%;
     
+    
 }
 
 #div-for-students-label{
-    color: white;
+    color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
     
 }
 
+.div-for-marketing{
+    /* border: 2px solid red; */
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    margin-top: 50px;
+    -webkit-animation: div-for-marketing 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	        animation: div-for-marketing 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    
+}
+
+.land-img{
+    min-width: 1000px;
+    max-width: 1000px;
+}
 
 
 
+@media  (min-width:1000px) {
+    .div-for-students-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .div-for-books-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .div-for-courses-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .div-for-enrollments-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
 
 /* border-teal-500 
 bg-teal-500 
@@ -477,3 +546,37 @@ transition duration-500
 ease select-none hover:bg-teal-600 
 focus:outline-none 
 focus:shadow-outline */
+
+
+@-webkit-keyframes div-for-marketing {
+  
+      0% {
+        -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+                transform: translateX(0) translateZ(0) rotateY(0);
+        -webkit-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+      }
+      100% {
+        -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+                transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        -webkit-transform-origin: 0% 50%;
+                transform-origin: 0% 50%;
+      }
+  }
+  
+
+  @keyframes div-for-marketing {
+    100% {
+      -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+              transform: translateX(0) translateZ(0) rotateY(0);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    0% {
+      -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+              transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+      -webkit-transform-origin: 0% 50%;
+              transform-origin: 0% 50%;
+    }
+  }
+  

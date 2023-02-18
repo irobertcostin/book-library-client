@@ -58,7 +58,21 @@ return text;
 
 }
 
+// marketing
 
+function marketing(){
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("div-for-marketing");
+
+    let img = document.createElement("img");
+    img.classList.add("land-img")
+    mainDiv.appendChild(img);
+    img.src="./images/1m.svg"
+    
+    // let secondDiv = document.createElement("div");
+    // secondDiv.classList.add("div-for-books-content")
+    return mainDiv;
+}
 
 
 // books
@@ -241,6 +255,8 @@ function courseModal(obj){
 
     let courseName = document.createElement("p");
     secondDiv.appendChild(courseName);
+    let courseLabel = document.createElement("p");
+    secondDiv.appendChild(courseLabel);
     courseName.id="course-name"
     courseName.textContent = obj.name;
 
@@ -346,17 +362,17 @@ function enrollmentModal(obj){
     let student_id = document.createElement("p");
     secondDiv.appendChild(student_id);
     student_id.id="enrollment-student-id"
-    student_id.textContent = obj.student_id;
+    student_id.textContent ="Student ID "+ obj.student_id;
 
     let course_id = document.createElement("p");
     secondDiv.appendChild(course_id);
     course_id.id="enrollment-course-id"
-    course_id.textContent = obj.course_id;
+    course_id.textContent ="Course ID "+ obj.course_id;
 
     let created_at = document.createElement("p");
     secondDiv.appendChild(created_at);
     created_at.id="enrollment-creation-date"
-    created_at.textContent = obj.created_at;
+    created_at.textContent = "Enrolled at "+ obj.created_at;
 
 
 
@@ -452,26 +468,30 @@ function studentModal(obj){
     secondDiv.classList.add("student-modal-info-div")
     mainDiv.appendChild(secondDiv)
 
+    let nameDiv = document.createElement("div");
+    nameDiv.classList.add("namediv-modal-info-div")
+    secondDiv.appendChild(nameDiv)
+
     let first_name = document.createElement("p");
-    secondDiv.appendChild(first_name);
+    nameDiv.appendChild(first_name);
     first_name.id="student-first-name"
-    // fullName.textContent = obj.name;
+    first_name.textContent = obj.first_name;
 
     let last_name = document.createElement("p");
-    secondDiv.appendChild(last_name);
+    nameDiv.appendChild(last_name);
     last_name.id="student-last-name"
-    // model.textContent = obj.department;
+    last_name.textContent = obj.last_name;
 
     let email = document.createElement("p");
     secondDiv.appendChild(email);
     email.id="student-email"
-    // model.textContent = obj.created_at;
+    email.textContent = obj.email;
 
 
     let age = document.createElement("p");
     secondDiv.appendChild(age);
     age.id="student-age"
-    // model.textContent = obj.created_at;
+    age.textContent = "Age "+obj.age;
 
 
 
@@ -479,11 +499,23 @@ function studentModal(obj){
 }
 
 
+async function populateDivForStudents(){
+
+    let divForStudents=document.querySelector(".div-for-students-content")
+
+
+    let response = await getStudentsApi();
+    
+
+    for(i=0;i<response.students.length;i++){
+        // console.log(response.books[i]);
+        divForStudents.appendChild(studentModal(response.students[i]));
+    }
+
+}
 
 // create api 
 
-
-// populate all modals
 // sign up window
 // log in window
 
