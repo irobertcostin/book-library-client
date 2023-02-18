@@ -303,7 +303,7 @@ function enrollmentModal(obj){
     // main container
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("enrollment-modal");
-    // mainDiv.id = obj.id
+    mainDiv.id = obj.id
 
 
     // div for buttons
@@ -346,17 +346,17 @@ function enrollmentModal(obj){
     let student_id = document.createElement("p");
     secondDiv.appendChild(student_id);
     student_id.id="enrollment-student-id"
-    // fullName.textContent = obj.name;
+    student_id.textContent = obj.student_id;
 
     let course_id = document.createElement("p");
     secondDiv.appendChild(course_id);
     course_id.id="enrollment-course-id"
-    // model.textContent = obj.department;
+    course_id.textContent = obj.course_id;
 
     let created_at = document.createElement("p");
     secondDiv.appendChild(created_at);
     created_at.id="enrollment-creation-date"
-    // model.textContent = obj.created_at;
+    created_at.textContent = obj.created_at;
 
 
 
@@ -365,15 +365,15 @@ function enrollmentModal(obj){
 
 async function populateDivForEnrollments(){
 
-    let divForCourses=document.querySelector(".div-for-courses-content")
+    let divForEnrollments=document.querySelector(".div-for-enrollments-content")
 
 
     let response = await getEnrollmentsApi();
     
 
-    for(i=0;i<response.courses.length;i++){
+    for(i=0;i<response.enrollment.length;i++){
         // console.log(response.books[i]);
-        divForCourses.appendChild(courseModal(response.courses[i]));
+        divForEnrollments.appendChild(enrollmentModal(response.enrollment[i]));
     }
 
 }

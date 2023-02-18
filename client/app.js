@@ -16,26 +16,32 @@ studentsBtn.addEventListener("click",(e)=>{
 
     let obj=e.target;
 
-    console.log(obj)
+    
 
 
 })
 
-booksBtn.addEventListener("click",(e)=>{
+booksBtn.addEventListener("click",async (e)=>{
 
     let obj=e.target;
 
-    console.log(obj)
+    let contentDiv = document.querySelector(".content-div");
+    contentDiv.innerHTML="";
+    contentDiv.appendChild(divForBooks());
+    populateDivForBooks();
+
 
 
 })
 
-coursesBtn.addEventListener("click",(e)=>{
+coursesBtn.addEventListener("click",async (e)=>{
 
     let obj=e.target;
 
-    console.log(obj)
-
+    let contentDiv = document.querySelector(".content-div");
+    contentDiv.innerHTML="";
+    contentDiv.appendChild(divForCourses());
+    populateDivForCourses()
 
 })
 
@@ -43,7 +49,9 @@ enrollsBtn.addEventListener("click",(e)=>{
 
     let obj=e.target;
 
-    console.log(obj)
-
+    let contentDiv = document.querySelector(".content-div");
+    contentDiv.innerHTML="";
+    contentDiv.appendChild(divForEnrollments());
+    populateDivForEnrollments()
 
 })
