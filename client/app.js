@@ -1,5 +1,7 @@
 let main = document.querySelector(".main");
 
+let loggedInStudent;
+
 
 let navibar = document.querySelector(".navbar-parent")
 navibar.innerHTML=loginTab();
@@ -133,6 +135,7 @@ main.addEventListener("click",async(e)=>{
         
     } else if(obj.classList.contains("login-modal-login-btn")){
 
+        
 
 
 
