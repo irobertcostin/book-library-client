@@ -640,7 +640,9 @@ async function populateDivForStudents(){
 function createLoginSignUpMask(){
 
     let mainDiv = document.createElement("div");
-    mainDiv.classList.add("student-modal");
+    mainDiv.classList.add("credentials-modal");
+
+
 
 
     return mainDiv;
@@ -653,7 +655,7 @@ function createLoginSignUpMask(){
 // sign up window
 // log in window
 
-// details for enrollment , with student info and course info 
+
 // populate landing page with new items 
 // navbar and logintab are functions that return text, no DOM , so must use innerHTL
 // landing page for every user connected , with his enrollments, courses that the user enrolled to and his info
