@@ -73,6 +73,30 @@ main.addEventListener("click",async(e)=>{
         contentDiv.innerHTML="";
         contentDiv.appendChild(divForEnrollments());
         populateDivForEnrollments();
+    }else if(obj.classList.contains("extended-enrollment-modal-edit-btn")){
+        // console.log(obj)
+        
+    }else if(obj.classList.contains("extended-enrollment-modal-edit-btn")){
+        console.log(obj)
+        
+    }else if(obj.classList.contains("login-navbar-btn")){
+        // console.log(obj)
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(createLoginMask())
+    }
+    else if(obj.classList.contains("signup-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(createSignupMask());
+        
+    }else if(obj.id=="signup-modal-reg-label"){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(createLoginMask());
+        console.log(obj)
+        
+    }else if(obj.id=="login-modal-reg-label"){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(createSignupMask());
+        console.log(obj)
     }
 })
 
@@ -125,4 +149,7 @@ enrollsBtn.addEventListener("click",(e)=>{
 })
 
 
-createEnrollmentExtended("test","test","test");
+// contentDiv.innerHTML="";
+// contentDiv.appendChild(createLoginMask())
+// contentDiv.appendChild(createSignupMask())
+// createLoginMask();
