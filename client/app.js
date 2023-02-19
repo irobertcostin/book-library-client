@@ -105,6 +105,37 @@ main.addEventListener("click",async(e)=>{
         contentDiv.innerHTML="";
         contentDiv.appendChild(marketing())
         
+    } else if(obj.classList.contains("signup-modal-signup-btn")){
+        
+        let first_name=document.getElementById("signup-modal-first-name-input").value;
+        let last_name=document.getElementById("signup-modal-last-name-input").value;
+        let email=document.getElementById("signup-modal-email-input").value;
+        let age=document.getElementById("signup-modal-age-name-input").value;
+        let pass=document.getElementById("signup-modal-pass-input").value;
+
+        if(first_name!=""&&last_name!=""&&email!=""&&age!=""&&pass!=""){
+            
+            let student = { 
+
+                first_name:first_name,
+                last_name:last_name,
+                email:email,
+                age:age,
+                pass:pass
+
+            }
+
+            await addStudent(student);
+
+        } else{
+            alert("Empty fields")
+        }
+        
+    } else if(obj.classList.contains("login-modal-login-btn")){
+
+
+
+
     }
 
 })
