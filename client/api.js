@@ -82,14 +82,14 @@ async function getStudentsApi(){
 async function getBookByIdApi(id){
 
     
-    let data = await api(`/books/by-ID/id=${id}`)
+    let data = await api(`/books/by-id/id=${id}`)
     return data.json();
 
 }
 
 async function getEnrollmentById(id){
 
-    let data = await api(`/enrollments/by-ID/id=${id}`)
+    let data = await api(`/enrollments/by-id/id=${id}`)
 
     return data.json();
 
@@ -98,7 +98,7 @@ async function getEnrollmentById(id){
 
 async function getStudentById(id){
 
-    let data = await api(`/students/by-ID/id=${id}`)
+    let data = await api(`/students/by-id/id=${id}`)
 
     return data.json();
 
@@ -106,7 +106,7 @@ async function getStudentById(id){
 
 async function getCourseById(id){
 
-    let data = await api(`/courses/by-ID/id=${id}`)
+    let data = await api(`/courses/by-id/id=${id}`)
 
     return data.json();
 
