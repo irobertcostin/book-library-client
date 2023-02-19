@@ -79,6 +79,38 @@ async function getStudentsApi(){
 }
 
 
+async function getBookByIdApi(id){
+
+    
+    let data = await api(`/books/by-ID/id=${id}`)
+    return data.json();
+
+}
+
+async function getEnrollmentById(id){
+
+    let data = await api(`/enrollments/by-ID/id=${id}`)
+
+    return data.json();
+
+}
+
+
+async function getStudentById(id){
+
+    let data = await api(`/students/by-ID/id=${id}`)
+
+    return data.json();
+
+}
+
+async function getCourseById(id){
+
+    let data = await api(`/courses/by-ID/id=${id}`)
+
+    return data.json();
+
+}
 
 
 
@@ -124,7 +156,7 @@ async function addStudent(student){
 
 async function deleteBook(id){
 
-    let data = await api('/all-cars/delete/id='+id,"DELETE");
+    let data = await api('/books/delete/id='+id,"DELETE");
 
     return data.json("Book successfully deleted");
 }
@@ -132,7 +164,7 @@ async function deleteBook(id){
 
 async function deleteCourse(id){
 
-    let data = await api('/books/delete/id='+id,"DELETE");
+    let data = await api('/courses/delete/id='+id,"DELETE");
 
     return data.json("Course successfully deleted");
 }
@@ -140,7 +172,7 @@ async function deleteCourse(id){
 
 async function deleteEnrollment(id){
 
-    let data = await api('/books/delete/id='+id,"DELETE");
+    let data = await api('/enrollments/delete/id='+id,"DELETE");
 
     return data.json("Enrollment successfully deleted");
 }
@@ -148,7 +180,7 @@ async function deleteEnrollment(id){
 
 async function deleteStudent(id){
 
-    let data = await api('/books/delete/id='+id,"DELETE");
+    let data = await api('/students/delete/id='+id,"DELETE");
 
     return data.json("Student successfully deleted");
 }

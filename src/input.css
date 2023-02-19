@@ -8,7 +8,7 @@
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
-    border-radius: 20px;
+    border-radius: 7px;
     position: relative;
 
     display: grid;
@@ -16,10 +16,10 @@
     padding-top: 50px;
     margin: auto;
 
-    background-color: rgb(10, 0, 65);
+    background-color: rgba(0, 116, 109, 0.459);
 
-    -webkit-box-shadow: 2px 2px 6px 2px #03ffff9c; 
-    box-shadow: 2px 2px 6px 2px #03ffff72;
+    /* -webkit-box-shadow: 2px 2px 6px 2px #03ffff9c; 
+    box-shadow: 2px 2px 6px 2px #03ffff72; */
 }
 
 
@@ -51,6 +51,20 @@
     
 
 }
+.book-modal-buy-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
+
 
 .book-modal-del-btn {
     background-color: rgb(138, 23, 167);
@@ -94,29 +108,33 @@
 
 }
 
+.content-div{
+    padding: 20px;
+}
+
 
 .course-modal{
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
-    border-radius: 20px;
+    border-radius: 7px;
     position: relative;
     margin: auto;
-    background-color: rgb(33, 13, 63);
+    background-color: rgba(0, 116, 109, 0.459);
 
     display: grid;
     grid-template-columns: 30% 70%;
     padding-top: 50px;
 
 
-    -webkit-box-shadow: 2px 2px 6px 2px #00ffff84; 
-box-shadow: 2px 2px 6px 2px #00ffff7e;
+    /* -webkit-box-shadow: 2px 2px 6px 2px #00ffff84; 
+box-shadow: 2px 2px 6px 2px #00ffff7e; */
 }
 
 
 #course-modal-btn-div{
     /* border: 2px solid red; */
-    border-radius: 20px;
+    border-radius: 7px;
     display: flex;
     flex-direction: row;
     justify-content: end;
@@ -191,7 +209,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e;
     height: 200px;
     /* border: 2px solid green; */
 
-    border-radius: 20px;
+    border-radius: 7px;
     position: relative;
     margin: auto;
 
@@ -201,10 +219,10 @@ box-shadow: 2px 2px 6px 2px #00ffff7e;
     grid-template-columns: 30% 70%;
     padding-top: 50px;
 
-    background-color: rgba(12, 1, 98, 0.507);
+    background-color: rgba(0, 116, 109, 0.459);
 
-    -webkit-box-shadow: 2px 2px 6px 2px #00ffff84; 
-box-shadow: 2px 2px 6px 2px #00ffff84;
+    /* -webkit-box-shadow: 2px 2px 6px 2px #00ffff84; 
+box-shadow: 2px 2px 6px 2px #00ffff84; */
 }
 
 
@@ -236,6 +254,34 @@ box-shadow: 2px 2px 6px 2px #00ffff84;
     
 
 }
+.extended-enrollment-modal-edit-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    
+    color: white;
+    
+
+}
+
+.enrollment-modal-details-btn {
+    background-color: rgb(22, 81, 198);
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 13px;
+    color: white;
+    
+
+}
 
 .enrollment-modal-del-btn {
     background-color: rgb(138, 23, 167);
@@ -251,6 +297,18 @@ box-shadow: 2px 2px 6px 2px #00ffff84;
 
 }
 
+.extended-enrollment-modal-close-btn{
+     background-color: rgb(138, 23, 167);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+}
+
 .enrollment-modal-img-div {
     /* border: 2px solid red; */
     display: flex;
@@ -262,6 +320,65 @@ box-shadow: 2px 2px 6px 2px #00ffff84;
 }
 
 
+
+.extended-enrollment-details {
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 116, 109, 0.459);
+    padding-bottom: 40px;
+    
+}
+
+
+#extended-enrollment-modal-btn-div{
+    width: 100%;
+    /* border: 2px solid white;     */
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    gap: 20px;
+
+    
+}
+
+.extended-student-modal-info-div {
+    /* border: 2px solid red; */
+    color: rgba(255, 255, 255, 0.77);
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 50px;
+    gap: 5px;
+}
+
+.extended-course-modal-info-div {
+    /* border: 2px solid red; */
+    color: rgba(255, 255, 255, 0.77);
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    /* margin-bottom: 50px; */
+    gap: 5px;
+}
+
+
+
+#extended-student-name-label{
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+#extended-course-name-label{
+    font-weight: 700;
+    margin-bottom: 7px;
+}
 
 #enrollment-logo {
     width: 75px;
@@ -278,10 +395,16 @@ box-shadow: 2px 2px 6px 2px #00ffff84;
      align-items: center;
 
 }
+.logo {
+    /* border: 2px solid red; */
+    /* width: 200px; */
+    height: 200px;
+    overflow: hidden;
+}
 
 .logo img {
     cursor: pointer;
-
+    
 }
 
 .namediv-modal-info-div{
@@ -315,17 +438,17 @@ justify-content: flex-end;
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
-    border-radius: 20px;
+    border-radius: 7px;
     position: relative;
 
     display: grid;
     grid-template-columns: 30% 70%;
     padding-top: 50px;
     margin: auto;
-    background-color: #001b55b8;
+    background-color: rgba(0, 116, 109, 0.459);
 
-    -webkit-box-shadow: 2px 2px 6px 2px #03ffff83; 
-box-shadow: 2px 2px 6px 2px #03ffff70;
+    /* -webkit-box-shadow: 2px 2px 6px 2px #03ffff83; 
+box-shadow: 2px 2px 6px 2px #03ffff70; */
 }
 
 
@@ -496,6 +619,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70;
 .div-for-marketing{
     /* border: 2px solid red; */
     padding: 20px;
+    
 
     display: flex;
     justify-content: center;
@@ -515,25 +639,99 @@ box-shadow: 2px 2px 6px 2px #03ffff70;
 
 
 
+#enrollment-id-label{
+color: rgba(255, 255, 255, 0.756);
+/* border: 2px solid red; */
+display: flex;
+padding-top: 10px;
+padding-left: 10px;
+font-size: 12px;
+}
+
+
+@media  (min-width:700px){
+
+   
+#extended-enrollment-modal-btn-div{
+    grid-area: btn;
+    /* border: 2px solid white; */
+    margin-bottom: 30px;
+}
+
+.extended-student-modal-info-div{
+    grid-area: stu;
+    /* min-height: 500px; */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.extended-course-modal-info-div{
+    grid-area: cou;
+    /* min-height: 500px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#enrollment-id-label{
+    color: rgba(255, 255, 255, 0.756);
+    /* border: 2px solid red; */
+    display: flex;
+    font-size: 14px;
+    grid-area: label;
+    margin-top: 30px;
+    }
+.extended-enrollment-details {
+    /* border: 2px solid red; */
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-right: 40px;
+    display: grid;
+    grid-template-areas: 'btn btn' 'stu cou''label label';
+
+    min-width: 700px;
+    max-width: 700px;
+
+    margin-top: 100px;
+    align-self: center;
+    
+}
+
+.content-div{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+    
+
+}
+
+
+
+
+
+
+
 @media  (min-width:1000px) {
     .div-for-students-content{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .div-for-books-content{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
     }
 
     .div-for-courses-content{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
     }
 
     .div-for-enrollments-content{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
     }
 }
 

@@ -121,12 +121,17 @@ function bookModal(obj){
     mainDiv.appendChild(btnDiv)
 
     
-    // edit button
-    let editBtn = document.createElement("button");
-    editBtn.classList.add("book-modal-edit-btn")
-    
-    editBtn.textContent = "Edit"
-    btnDiv.appendChild(editBtn)
+    // // edit button
+    // let editBtn = document.createElement("button");
+    // editBtn.classList.add("book-modal-edit-btn") 
+    // editBtn.textContent = "Edit"
+    // btnDiv.appendChild(editBtn)
+
+    // buy button
+    let buyBtn = document.createElement("button");
+    buyBtn.classList.add("book-modal-buy-btn") 
+    buyBtn.textContent = "Buy"
+    btnDiv.appendChild(buyBtn)
 
 
     // delete button
@@ -154,12 +159,19 @@ function bookModal(obj){
     let bookName = document.createElement("p");
     secondDiv.appendChild(bookName);
     bookName.id="book-name"
-    bookName.textContent ="Name: "+ obj.book_name;
+    bookName.textContent ="Title " + obj.book_name;
+
+    let author = document.createElement("p");
+    secondDiv.appendChild(author);
+    author.id="book-author"
+    author.textContent ="By " + obj.author;
 
     let createdAt = document.createElement("p");
     secondDiv.appendChild(createdAt);
     createdAt.id="book-creation-date"
     createdAt.textContent ="Created at: "+ obj.created_at;
+
+    
 
     return mainDiv;
 }
@@ -328,13 +340,21 @@ function enrollmentModal(obj){
     btnDiv.id = "enrollment-modal-btn-div"
     mainDiv.appendChild(btnDiv)
 
-    
+
     // edit button
-    let editBtn = document.createElement("button");
-    editBtn.classList.add("enrollment-modal-edit-btn")
+    let details = document.createElement("button");
+    details.classList.add("enrollment-modal-details-btn")
     
-    editBtn.textContent = "Edit"
-    btnDiv.appendChild(editBtn)
+    details.textContent = "See details"
+    btnDiv.appendChild(details)
+
+    
+    // // edit button
+    // let editBtn = document.createElement("button");
+    // editBtn.classList.add("enrollment-modal-edit-btn")
+    
+    // editBtn.textContent = "Edit"
+    // btnDiv.appendChild(editBtn)
 
 
     // delete button
@@ -395,6 +415,107 @@ async function populateDivForEnrollments(){
 }
 
 
+function createEnrollmentExtended(enrollment,student,course){
+
+
+    // let response = await getEnrollmentById(id);
+
+
+    let mainDiv=document.createElement("div");
+    mainDiv.classList.add("extended-enrollment-details");
+    mainDiv.id=enrollment.id
+
+    let enrollmentLabel = document.createElement("p");
+    mainDiv.appendChild(enrollmentLabel);
+    enrollmentLabel.id="enrollment-id-label";
+    enrollmentLabel.textContent=`Enrollment ID ${enrollment.id}, from ${enrollment.created_at}`
+    // buttons
+
+    let btnDiv = document.createElement("div");
+    btnDiv.id = "extended-enrollment-modal-btn-div"
+    mainDiv.appendChild(btnDiv)
+
+    
+    let editBtn = document.createElement("button");
+    editBtn.classList.add("extended-enrollment-modal-edit-btn")
+    editBtn.textContent="Edit"
+    btnDiv.appendChild(editBtn)
+
+
+    let close = document.createElement("button");
+    close.classList.add("extended-enrollment-modal-close-btn")
+    close.textContent = "Close"
+    btnDiv.appendChild(close)
+
+
+
+    // student card 
+
+    let studentDiv = document.createElement("div");
+    studentDiv.classList.add("extended-student-modal-info-div")
+    mainDiv.appendChild(studentDiv)
+    studentDiv.id=enrollment.student_id;
+
+    let label = document.createElement("p");
+    studentDiv.appendChild(label);
+    label.id="extended-student-name-label"
+    label.textContent = "Student info:"
+
+
+    let name = document.createElement("p");
+    studentDiv.appendChild(name);
+    name.id="extended-student-name"
+    name.textContent ="Full name: " +student.first_name +" " + student.last_name;
+
+    
+
+    let email = document.createElement("p");
+    studentDiv.appendChild(email);
+    email.id="extended-student-email"
+    email.textContent ="Email address: "+ student.email;
+
+
+    let age = document.createElement("p");
+    studentDiv.appendChild(age);
+    age.id="extended-student-age"
+    age.textContent = "Age: "+student.age;
+
+    // course card
+
+    let courseDiv = document.createElement("div");
+    courseDiv.classList.add("extended-course-modal-info-div")
+    mainDiv.appendChild(courseDiv)
+    courseDiv.id=enrollment.course_id;
+
+    let label2 = document.createElement("p");
+    courseDiv.appendChild(label2);
+    label2.id="extended-course-name-label"
+    label2.textContent = "Course info:"
+
+
+    let courseName = document.createElement("p");
+    courseDiv.appendChild(courseName);
+    let courseLabel = document.createElement("p");
+    courseDiv.appendChild(courseLabel);
+    courseName.id="extended-course-name"
+    courseName.textContent ="Title: "+ course.name;
+
+    let department = document.createElement("p");
+    courseDiv.appendChild(department);
+    department.id="extended-course-creation-date"
+    department.textContent ="Department: "+ course.department;
+
+
+
+
+    return mainDiv;
+
+}
+
+
+
+
+
 
 
 // students
@@ -428,7 +549,7 @@ function studentModal(obj){
     // main container
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("student-modal");
-    // mainDiv.id = obj.id
+    mainDiv.id = obj.id
 
 
     // div for buttons
@@ -514,12 +635,25 @@ async function populateDivForStudents(){
 
 }
 
-// create api 
+
+
+function createLoginSignUpMask(){
+
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("student-modal");
+
+
+    return mainDiv;
+
+
+}
+
+
 
 // sign up window
 // log in window
 
-
+// details for enrollment , with student info and course info 
 // populate landing page with new items 
 // navbar and logintab are functions that return text, no DOM , so must use innerHTL
 // landing page for every user connected , with his enrollments, courses that the user enrolled to and his info
