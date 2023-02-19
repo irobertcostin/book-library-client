@@ -754,6 +754,49 @@ function createSignupMask(){
     passDiv.appendChild(passInput);
 
 
+    let otherInfoDiv = document.createElement("div");
+    otherInfoDiv.classList.add("signup-modal-other-info-div");
+    mainDiv.appendChild(otherInfoDiv)
+
+    let firstNameLabel = document.createElement("p");
+    firstNameLabel.textContent="First name"
+    firstNameLabel.id="signup-modal-first-name-label"
+    otherInfoDiv.appendChild(firstNameLabel);
+
+    let firstNameInput = document.createElement("input");
+    firstNameInput.placeholder=" your first name"
+    firstNameInput.id="signup-modal-first-name-input"
+    otherInfoDiv.appendChild(firstNameInput);
+
+
+    let lastNameLabel = document.createElement("p");
+    lastNameLabel.textContent="Last name"
+    lastNameLabel.id="signup-modal-last-name-label"
+    otherInfoDiv.appendChild(lastNameLabel);
+
+    let lastNameInput = document.createElement("input");
+    lastNameInput.placeholder=" your last name"
+    lastNameInput.id="signup-modal-last-name-input"
+    otherInfoDiv.appendChild(lastNameInput);
+
+
+
+    let ageLabel = document.createElement("p");
+    ageLabel.textContent="Age"
+    ageLabel.id="signup-modal-age-name-label"
+    otherInfoDiv.appendChild(ageLabel);
+
+    let ageInput = document.createElement("input");
+    ageInput.type="number"
+    ageInput.id="signup-modal-age-name-input"
+    otherInfoDiv.appendChild(ageInput);
+
+
+
+
+
+
+
     let alternative = document.createElement("a");
     alternative.textContent="Already registered? Log in to your account here !"
     alternative.id="signup-modal-reg-label"
@@ -773,18 +816,13 @@ function createSignupMask(){
 
 }
 
-
-// sign up window
-
-
-
-// populate landing page with new items 
-// navbar and logintab are functions that return text, no DOM , so must use innerHTL
-// landing page for every user connected , with his enrollments, courses that the user enrolled to and his info
 // master account for course add and edit and data management through client
 // normal account with delete or enroll active 
 // dupa login, tab de My Courses / Enrollments / User profile 
 //
+// landing page cu snap scroll 
+// sign-up 
+// dupa login putem afisa contentul
 
 
 
