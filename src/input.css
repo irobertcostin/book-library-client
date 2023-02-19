@@ -649,6 +649,206 @@ font-size: 12px;
 }
 
 
+
+
+
+.login-modal{
+    width: 100%;
+    height: auto;
+    background-color: #EF4444;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.signup-modal{
+    width: 100%;
+    height: auto;
+    background-color: #14b8a5a2;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+.login-modal-close-btn{
+    background-color: #14B8A6;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+
+    margin-left: auto;
+}
+
+
+.signup-modal-close-btn{
+    background-color: #EF4444;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+
+    margin-left: auto;
+}
+
+#login-modal-label{
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.809);
+    margin-bottom: 40px;
+}
+
+
+.login-modal-email-div{
+
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 350px;
+
+}
+
+.signup-modal-email-div{
+
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 350px;
+
+}
+
+#login-modal-email-label{
+    color: rgba(255, 255, 255, 0.809);
+    font-size: 15px;
+}
+
+#signup-modal-email-label{
+    color: rgba(255, 255, 255, 0.809);
+    font-size: 15px;
+}
+
+.login-modal-pass-div{
+
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+    max-width: 350px;
+
+}
+
+.signup-modal-pass-div{
+
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+    max-width: 350px;
+
+}
+
+
+
+#login-modal-pass-label{
+    color: rgba(255, 255, 255, 0.809);
+    font-size: 15px;
+}
+#signup-modal-pass-label{
+    color: rgba(255, 255, 255, 0.809);
+    font-size: 15px;
+}
+
+
+#login-modal-email-input{
+    outline: none;
+    border: none;
+    padding: 1px;
+    padding-left: 4px;
+}
+
+#login-modal-pass-input{
+    outline: none;
+    border: none;
+    padding: 1px;
+    padding-left: 4px;
+}
+#signup-modal-email-input{
+    outline: none;
+    border: none;
+    padding: 1px;
+    padding-left: 4px;
+}
+
+#signup-modal-pass-input{
+    outline: none;
+    border: none;
+    padding: 1px;
+    padding-left: 4px;
+}
+.login-modal-login-btn{
+    margin: 40px;
+    margin-top: 90px;
+    background-color: #14B8A6;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    font-size: 20px;
+    width: 170px;
+    border-radius: 3px;
+    /* font-weight: 700; */
+}
+
+.signup-modal-signup-btn{
+    margin: 40px;
+    margin-top: 90px;
+    background-color: #EF4444;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    font-size: 20px;
+    width: 170px;
+    border-radius: 3px;
+    /* font-weight: 700; */
+}
+
+#login-modal-reg-label{
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+#signup-modal-reg-label{
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+
+
 @media  (min-width:700px){
 
    

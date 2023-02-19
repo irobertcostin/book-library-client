@@ -43,13 +43,13 @@ function navbar(){
 function loginTab(){
 
     let text = `
-    <div class="w-full    flex flex-row flex-nowrap pt-10  justify-end items-center text-xs lg:text-xl md:flex-nowrap ">
+    <div class=" w-full flex flex-row flex-nowrap pt-10  justify-end items-center text-xs lg:text-xl md:flex-nowrap ">
     <button type="button"
-        class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-red-600 focus:outline-none focus:shadow-outline">
+        class="border login-navbar-btn border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-red-600 focus:outline-none focus:shadow-outline">
         Login
     </button>
     <button type="button"
-        class="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
+        class="border signup-btn border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
         Sign up
     </button>
 </div>`
@@ -637,23 +637,145 @@ async function populateDivForStudents(){
 
 
 
-function createLoginSignUpMask(){
+function createLoginMask(){
 
     let mainDiv = document.createElement("div");
-    mainDiv.classList.add("credentials-modal");
+    mainDiv.classList.add("login-modal");
+
+    let close = document.createElement("button");
+    close.classList.add("login-modal-close-btn")
+    close.textContent = "Close"
+    mainDiv.appendChild(close)
+
+    let label = document.createElement("p");
+    label.textContent="Log in to your account"
+    label.id="login-modal-label"
+    mainDiv.appendChild(label);
+
+
+    let nameDiv = document.createElement("div");
+    nameDiv.classList.add("login-modal-email-div");
+    mainDiv.appendChild(nameDiv)
+
+    let nameLabel = document.createElement("p");
+    nameLabel.textContent="Email"
+    nameLabel.id="login-modal-email-label"
+    nameDiv.appendChild(nameLabel);
+
+    let nameInput = document.createElement("input");
+    nameInput.placeholder=" your email address"
+    nameInput.id="login-modal-email-input"
+    nameDiv.appendChild(nameInput);
+
+
+    let passDiv = document.createElement("div");
+    passDiv.classList.add("login-modal-pass-div");
+    mainDiv.appendChild(passDiv)
+
+    let passLabel = document.createElement("p");
+    passLabel.textContent="Password"
+    passLabel.id="login-modal-pass-label"
+    passDiv.appendChild(passLabel);
+
+
+    let passInput = document.createElement("input");
+    passInput.placeholder=" your password"
+    passInput.id="login-modal-pass-input"
+    passInput.type="password"
+    passDiv.appendChild(passInput);
+
+
+    let alternative = document.createElement("a");
+    alternative.textContent="Not registered yet? Register here!"
+    alternative.id="login-modal-reg-label"
+    mainDiv.appendChild(alternative);
+
+    // login btn
+
+    let loginBtn = document.createElement("button");
+    loginBtn.textContent="Log in";
+    loginBtn.classList.add("login-modal-login-btn")
+    mainDiv.appendChild(loginBtn)
 
 
 
 
     return mainDiv;
 
-
 }
 
 
 
+function createSignupMask(){
+
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("signup-modal");
+
+    let close = document.createElement("button");
+    close.classList.add("signup-modal-close-btn")
+    close.textContent = "Close"
+    mainDiv.appendChild(close)
+
+    let label = document.createElement("p");
+    label.textContent="Sign up now and enjoy all benefits!"
+    label.id="login-modal-label"
+    mainDiv.appendChild(label);
+
+
+    let nameDiv = document.createElement("div");
+    nameDiv.classList.add("signup-modal-email-div");
+    mainDiv.appendChild(nameDiv)
+
+    let nameLabel = document.createElement("p");
+    nameLabel.textContent="Email"
+    nameLabel.id="signup-modal-email-label"
+    nameDiv.appendChild(nameLabel);
+
+    let nameInput = document.createElement("input");
+    nameInput.placeholder=" your email address"
+    nameInput.id="signup-modal-email-input"
+    nameDiv.appendChild(nameInput);
+
+
+    let passDiv = document.createElement("div");
+    passDiv.classList.add("signup-modal-pass-div");
+    mainDiv.appendChild(passDiv)
+
+    let passLabel = document.createElement("p");
+    passLabel.textContent="Password"
+    passLabel.id="signup-modal-pass-label"
+    passDiv.appendChild(passLabel);
+
+
+    let passInput = document.createElement("input");
+    passInput.placeholder=" your password"
+    passInput.id="signup-modal-pass-input"
+    passInput.type="password"
+    passDiv.appendChild(passInput);
+
+
+    let alternative = document.createElement("a");
+    alternative.textContent="Already registered? Log in to your account here !"
+    alternative.id="signup-modal-reg-label"
+    mainDiv.appendChild(alternative);
+
+    // login btn
+
+    let loginBtn = document.createElement("button");
+    loginBtn.textContent="Register";
+    loginBtn.classList.add("signup-modal-signup-btn")
+    mainDiv.appendChild(loginBtn)
+
+
+
+
+    return mainDiv;
+
+}
+
+
 // sign up window
-// log in window
+
 
 
 // populate landing page with new items 
