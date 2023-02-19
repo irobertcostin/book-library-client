@@ -97,7 +97,16 @@ main.addEventListener("click",async(e)=>{
         contentDiv.innerHTML="";
         contentDiv.appendChild(createSignupMask());
         console.log(obj)
+    }else if(obj.classList.contains("login-modal-close-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(marketing())
     }
+    else if(obj.classList.contains("signup-modal-close-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(marketing())
+        
+    }
+
 })
 
 
