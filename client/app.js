@@ -1,6 +1,5 @@
 let main = document.querySelector(".main");
 
-let loggedInStudent;
 
 
 let navibar = document.querySelector(".navbar-parent")
@@ -137,8 +136,18 @@ main.addEventListener("click",async(e)=>{
 
         
 
+        let email = document.getElementById("login-modal-email-input").value;
+        let password = document.getElementById("login-modal-pass-input").value;
+        
+        let user = {
+            email:email,
+            password:password
+        }
 
+        console.log(user)
 
+        let response =  await login(user)
+        console.log(response)
     }
 
 })
@@ -192,7 +201,10 @@ enrollsBtn.addEventListener("click",(e)=>{
 })
 
 
-// contentDiv.innerHTML="";
-// contentDiv.appendChild(createLoginMask())
-// contentDiv.appendChild(createSignupMask())
-// createLoginMask();
+
+// mesaje logare user 
+// div user logat 
+// div logout  - vaiabila loggedInUser=""
+// landpage fara content, doar daca e logat, si optiunile
+// add enrollment 
+// cosmetizare erori

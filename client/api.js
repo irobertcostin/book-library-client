@@ -151,6 +151,37 @@ async function addStudent(student){
 
 }
 
+let loggedInStudent;
+
+async function login(user){
+
+
+    try {
+        let data = await api("/students/login","POST",user);
+
+
+    if(data.status!=212){
+
+        let response = await data.json();
+        alert(response.error.message); 
+
+        // function to retrieve a user by email
+    }else {
+
+        console.log(user.email);
+
+    }
+    } catch (error) {
+        console.log(error)
+    }
+
+
+
+    
+
+
+}
+
 
 // DELETE methods 
 
