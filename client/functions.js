@@ -1,7 +1,7 @@
 function navbar(){
 
     
-    let text = `<div class=" navbar mt-16  h-[100px] w-full bg-transparent flex flex-row items-center relative flex-wrap justify-between text-xs lg:text-xl md:flex-nowrap md:mt-8 lg:-mt-2">
+    let text = `<div class=" navbar hidden mt-16  h-[100px] w-full bg-transparent flex-row items-center relative flex-wrap justify-between text-xs lg:text-xl md:flex-nowrap md:mt-8 lg:-mt-2">
 
     <div class=" w-full  flex flex-row flex-nowrap items-center justify-center">
         <button type="button"

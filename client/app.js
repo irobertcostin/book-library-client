@@ -114,23 +114,18 @@ main.addEventListener("click",async(e)=>{
         let age=document.getElementById("signup-modal-age-name-input").value;
         let pass=document.getElementById("signup-modal-pass-input").value;
 
-        if(first_name!=""&&last_name!=""&&email!=""&&age!=""&&pass!=""){
-            
-            let student = { 
 
-                first_name:first_name,
-                last_name:last_name,
-                email:email,
-                age:age,
-                pass:pass
+        let student = { 
 
-            }
+            first_name:first_name,
+            last_name:last_name,
+            email:email,
+            age:age,
+            password:pass
 
-            await addStudent(student);
-
-        } else{
-            alert("Empty fields")
         }
+
+        await addStudent(student);
         
     } else if(obj.classList.contains("login-modal-login-btn")){
 
@@ -144,7 +139,7 @@ main.addEventListener("click",async(e)=>{
             password:password
         }
 
-        console.log(user)
+        // console.log(user)
 
         let response =  await login(user)
         console.log(response)

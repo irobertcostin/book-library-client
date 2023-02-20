@@ -146,12 +146,29 @@ async function addEnrollments(enrollment){
 async function addStudent(student){
     
     // FETCH with url attribute , method POST and an object
-    let data = await api("/students/add","POST",student)
-    return data.json()
+    try {
+        let data = await api("/students/add","POST",student)
+
+        if(data.status!=201){
+            let response = await data.json();
+            alert(response.error.message)
+        }else {
+            // bring in client
+            alert("Successfully registered, please login")
+            contentDiv.innerHTML="";
+        contentDiv.appendChild(createLoginMask())
+            
+
+
+        }
+
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
-let loggedInStudent;
+let loggedInStudent={};
 
 async function login(user){
 
@@ -166,11 +183,16 @@ async function login(user){
         alert(response.error.message); 
 
         // function to retrieve a user by email
-    }else {
-
-        console.log(user.email);
-
+        // and set it as the loggedInUser
+    }else if(data.status==212){
+        let response = await data.json();
+        alert(response)
+        contentDiv.innerHTML=""
     }
+
+
+
+    
     } catch (error) {
         console.log(error)
     }
