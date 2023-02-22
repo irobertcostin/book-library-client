@@ -1569,6 +1569,38 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
   }
 }
 
+.login-error{
+  min-width: 250px;
+  max-width: 400px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes flickerAnimation {
+  0%   {
+    opacity:1;
+  }
+
+  50%  {
+    opacity:0;
+  }
+
+  100% {
+    opacity:1;
+  }
+}
+
+.animate-flicker {
+  animation: flickerAnimation .5s infinite;
+}
+
 /* border-teal-500 
 bg-teal-500 
 text-white 

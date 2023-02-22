@@ -816,13 +816,58 @@ function createSignupMask(){
 
 }
 
-// master account for course add and edit and data management through client
-// normal account with delete or enroll active 
-// dupa login, tab de My Courses / Enrollments / User profile 
-//
-// landing page cu snap scroll 
-// sign-up 
-// dupa login putem afisa contentul
+
+function loggedInUserTab(obj){
+
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("logged-in-user");
+
+
+
+
+    return mainDiv;
+}
+
+
+
+function loginErrorMsg(error){
+
+    
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("login-error");
+    mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+}
+
+
+function removeLoginErrorMsg(){
+
+    let err = document.querySelector(".login-error")
+    let modal = document.querySelector(".login-modal")
+    modal.removeChild(err)
+
+}
+
+function welcome(user){
+
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("login-welcome");
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+
+}
+
 
 
 

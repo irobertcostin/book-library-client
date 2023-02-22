@@ -126,6 +126,9 @@ main.addEventListener("click",async(e)=>{
         }
 
         await addStudent(student);
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(createLoginMask())
+            
         
     } else if(obj.classList.contains("login-modal-login-btn")){
 
@@ -139,10 +142,17 @@ main.addEventListener("click",async(e)=>{
             password:password
         }
 
-        // console.log(user)
 
-        let response =  await login(user)
-        console.log(response)
+        // fetch for user with function for email address
+        // functions for accounts, if already exists
+
+        await login(user)
+        // console.log(loggedInStudent)
+        if(loggedInStudent!=""){
+            contentDiv.innerHTML="";
+            document.querySelector(".navbar").classList.remove("hidden");
+        }
+        
     }
 
 })
@@ -195,8 +205,14 @@ enrollsBtn.addEventListener("click",(e)=>{
 
 })
 
-
-
+// master account for course add and edit and data management through client
+// normal account with delete or enroll active 
+// dupa login, tab de My Courses / Enrollments / User profile 
+//
+// landing page cu snap scroll 
+// sign-up 
+// dupa login putem afisa contentul
+// cum putem ascunde parola din get user by ID 
 // mesaje logare user 
 // div user logat 
 // div logout  - vaiabila loggedInUser=""

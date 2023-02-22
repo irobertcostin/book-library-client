@@ -962,6 +962,52 @@ font-size: 12px;
     }
 }
 
+
+.login-error{
+    min-width: 250px;
+    max-width: 400px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  .animate-flicker {
+     -webkit-animation: flickerAnimation .5s infinite;
+     -moz-animation: flickerAnimation .5s infinite;
+     -o-animation: flickerAnimation .5s infinite;
+      animation: flickerAnimation .5s infinite;
+  }
+  
+  
+
+
+
 /* border-teal-500 
 bg-teal-500 
 text-white 
