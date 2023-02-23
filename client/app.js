@@ -173,6 +173,7 @@ main.addEventListener("click",async(e)=>{
         loggedInStudent="";
         userObj="";
         document.querySelector(".navbar").classList.add("hidden");
+        contentDiv.innerHTML="";
         contentDiv.appendChild(marketing());
     }
 
@@ -240,6 +241,9 @@ enrollsBtn.addEventListener("click",(e)=>{
 
 // document.querySelector(".navbar-parent").appendChild(signOutElement());
             
+
+// add author to book modal 
+// add other info account in account modal
 
 // de ce la refresh ma scoate din cont
 // sign-up successfully to update

@@ -129,15 +129,15 @@ function bookModal(obj){
     // buy button
     let buyBtn = document.createElement("button");
     buyBtn.classList.add("book-modal-buy-btn") 
-    buyBtn.textContent = "Buy"
+    buyBtn.textContent = "Buy now"
     btnDiv.appendChild(buyBtn)
 
 
     // delete button
-    let delBtn = document.createElement("button");
-    delBtn.textContent="Delete";
-    delBtn.classList.add("book-modal-del-btn")
-    btnDiv.appendChild(delBtn)
+    // let delBtn = document.createElement("button");
+    // delBtn.textContent="Delete";
+    // delBtn.classList.add("book-modal-del-btn")
+    // btnDiv.appendChild(delBtn)
 
 
     let imgDiv = document.createElement("div");
@@ -238,15 +238,15 @@ function courseModal(obj){
     let editBtn = document.createElement("button");
     editBtn.classList.add("course-modal-edit-btn")
     
-    editBtn.textContent = "Edit"
+    editBtn.textContent = "Buy now"
     btnDiv.appendChild(editBtn)
 
 
     // delete button
-    let delBtn = document.createElement("button");
-    delBtn.textContent="Delete";
-    delBtn.classList.add("course-modal-del-btn")
-    btnDiv.appendChild(delBtn)
+    // let delBtn = document.createElement("button");
+    // delBtn.textContent="Delete";
+    // delBtn.classList.add("course-modal-del-btn")
+    // btnDiv.appendChild(delBtn)
 
 
     let imgDiv = document.createElement("div");
