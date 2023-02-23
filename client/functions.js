@@ -856,24 +856,29 @@ function removeLoginErrorMsg(){
     modal.removeChild(err)
 
 }
-
-// function welcomeLogin(user){
-
-//     let mainDiv = document.createElement("div");
-//     mainDiv.classList.add("login-welcome");
-
-//     let text = document.createElement("p");
-//     text.classList.add("login-intro");
-//     mainDiv.appendChild(text);
-//     text.textContent=`Hi, ${user.first_name}`
-
+function signupErrorMsg(error){
 
     
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("signup-error");
+    mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
 
 
-//     return mainDiv;
+    return mainDiv;
+}
 
-// }
+
+function removeSignupErrorMsg(){
+
+    let err = document.querySelector(".signup-error")
+    let modal = document.querySelector(".signup-modal")
+    modal.removeChild(err)
+
+}
 
 
 function signOutElement(){

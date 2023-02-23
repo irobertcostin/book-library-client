@@ -125,9 +125,10 @@ main.addEventListener("click",async(e)=>{
 
         }
 
-        await addStudent(student);
+        let response = await addStudent(student);
         contentDiv.innerHTML="";
         contentDiv.appendChild(createLoginMask())
+        console.log(response)
             
         
     } else if(obj.classList.contains("login-modal-login-btn")){

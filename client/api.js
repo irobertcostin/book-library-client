@@ -221,7 +221,8 @@ async function addStudent(student){
 
         if(data.status!=201){
             let response = await data.json();
-            alert(response.error.message)
+            // console.log(response)
+            alert(response)
         }else {
             // bring in client
             alert("Successfully registered, please login")
