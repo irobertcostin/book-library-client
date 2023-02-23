@@ -143,23 +143,53 @@ main.addEventListener("click",async(e)=>{
         }
 
 
-        // fetch for user with function for email address
-        // functions for accounts, if already exists
+       
 
         await login(user)
-        // console.log(loggedInStudent)
+        
         if(loggedInStudent!=""){
             contentDiv.innerHTML="";
             document.querySelector(".navbar").classList.remove("hidden");
+            document.querySelector(".navbar-parent").innerHTML="";
+            document.querySelector(".navbar-parent").appendChild(signOutElement());
+            userObj = await getStudentByEmail(loggedInStudent);
+            contentDiv.appendChild(accountModal(userObj));
+            
+            
+            
+
+        }
+
+
+        if(obj.classList.contains("account-btn")){
+            console.log(obj)
         }
         
     }
+
+    else if(obj.classList.contains("sign-out-btn")){
+        navibar.innerHTML="";
+        navibar.innerHTML=loginTab();
+        loggedInStudent="";
+        userObj="";
+        document.querySelector(".navbar").classList.add("hidden");
+        contentDiv.appendChild(marketing());
+    }
+
+
+    else if(obj.classList.contains("account-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(accountModal(userObj));
+    }
+
+    
 
 })
 
 
 studentsBtn.addEventListener("click",(e)=>{
 
+    console.log(userObj);
     let obj=e.target;
 
     let contentDiv = document.querySelector(".content-div");
@@ -167,6 +197,7 @@ studentsBtn.addEventListener("click",(e)=>{
     contentDiv.appendChild(divForStudents());
     populateDivForStudents()
 
+    
 
 })
 
@@ -205,13 +236,18 @@ enrollsBtn.addEventListener("click",(e)=>{
 
 })
 
+
+
+// document.querySelector(".navbar-parent").appendChild(signOutElement());
+            
+
+// de ce la refresh ma scoate din cont
+// sign-up successfully to update
 // master account for course add and edit and data management through client
 // normal account with delete or enroll active 
-// dupa login, tab de My Courses / Enrollments / User profile 
-//
+
 // landing page cu snap scroll 
-// sign-up 
-// dupa login putem afisa contentul
+
 // cum putem ascunde parola din get user by ID 
 // mesaje logare user 
 // div user logat 
@@ -219,3 +255,8 @@ enrollsBtn.addEventListener("click",(e)=>{
 // landpage fara content, doar daca e logat, si optiunile
 // add enrollment 
 // cosmetizare erori
+// make enrollment
+// edit delete buttons with outline and hover transition
+// sign out button 
+// welcome after sign in 
+// 
