@@ -725,6 +725,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline {
+  outline-style: solid;
+}
+
 .transition {
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -781,8 +791,8 @@ video {
 
 .book-modal-buy-btn {
   background-color: rgb(22, 81, 198);
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 2px;
   padding-bottom: 2px;
   text-align: center;
@@ -828,7 +838,7 @@ video {
 }
 
 .content-div{
-  padding: 20px;
+  margin-top: 50px;
 }
 
 .course-modal{
@@ -863,8 +873,8 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
 
 .course-modal-edit-btn {
   background-color: rgb(22, 81, 198);
-  padding-left: 6px;
-  padding-right: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 2px;
   padding-bottom: 2px;
   text-align: center;
@@ -1290,7 +1300,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 .login-modal{
   width: 100%;
   height: auto;
-  background-color: #EF4444;
+  background-color: #212a37;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 20px;
@@ -1299,12 +1309,13 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
   justify-content: center;
   align-items: center;
   border-radius: 7px;
+  margin-top: 50px;
 }
 
 .signup-modal{
   width: 100%;
   height: auto;
-  background-color: #14b8a5a2;
+  background-color: #212a37;
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 20px;
@@ -1313,6 +1324,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
   justify-content: center;
   align-items: center;
   border-radius: 7px;
+  /* margin-top: 50px; */
 }
 
 .login-modal-close-btn{
@@ -1326,6 +1338,16 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
   font-size: 15px;
   color: white;
   margin-left: auto;
+}
+
+.shadow{
+  /*     
+background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100% );
+transform: translate3d(0px, 20px, 0) scale(0.95);
+filter: blur(20px);
+opacity: var(0.7);
+transition: opacity 0.3s;
+position: relative; */
 }
 
 .signup-modal-close-btn{
@@ -1474,7 +1496,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 
 .signup-modal-signup-btn{
   margin: 40px;
-  margin-top: 90px;
+  margin-top: 70px;
   background-color: #EF4444;
   color: rgb(255, 255, 255);
   padding: 2px;
@@ -1487,11 +1509,51 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 #login-modal-reg-label{
   margin-top: 30px;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.653);
 }
 
 #signup-modal-reg-label{
   margin-top: 30px;
   cursor: pointer;
+  color: rgba(255, 255, 255, 0.653);
+}
+
+.account-modal {
+  width: 100%;
+  height: auto;
+  background-color: #212a37;
+  color: #14B8A6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.account-modal-img-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.account-modal-img-div img {
+  /* width: 100px; */
+  margin-top: 10px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+}
+
+.account-modal-info-div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 30px;
 }
 
 @media  (min-width:700px){
@@ -1547,6 +1609,30 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
   }
 }
 
+.sign-out-btn{
+  display: block;
+  margin-top: 0px;
+  width: 77px;
+  height: 36px;
+  background-color: #EF4444;
+  color: white;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.sign-out-btn:hover{
+  background-color: #d12929;
+  transition: 0.5s ease-in-out;
+}
+
+.sign-out-element-div{
+  width: 100%;
+  display: flex;
+  padding-top: 60px;
+}
+
 @media  (min-width:1000px) {
   .div-for-students-content{
     display: grid;
@@ -1567,6 +1653,44 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
   }
+
+  .sign-out-btn{
+    width: 112px;
+    height: 45px;
+    font-size: 20px;
+  }
+}
+
+.login-error{
+  min-width: 250px;
+  max-width: 400px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes flickerAnimation {
+  0%   {
+    opacity:1;
+  }
+
+  50%  {
+    opacity:0;
+  }
+
+  100% {
+    opacity:1;
+  }
+}
+
+.animate-flicker {
+  animation: flickerAnimation .5s infinite;
 }
 
 /* border-teal-500 

@@ -126,6 +126,9 @@ main.addEventListener("click",async(e)=>{
         }
 
         await addStudent(student);
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(createLoginMask())
+            
         
     } else if(obj.classList.contains("login-modal-login-btn")){
 
@@ -139,17 +142,55 @@ main.addEventListener("click",async(e)=>{
             password:password
         }
 
-        // console.log(user)
 
-        let response =  await login(user)
-        console.log(response)
+       
+
+        await login(user)
+        
+        if(loggedInStudent!=""){
+            contentDiv.innerHTML="";
+            document.querySelector(".navbar").classList.remove("hidden");
+            document.querySelector(".navbar-parent").innerHTML="";
+            document.querySelector(".navbar-parent").appendChild(signOutElement());
+            userObj = await getStudentByEmail(loggedInStudent);
+            contentDiv.appendChild(accountModal(userObj));
+            
+            
+            
+
+        }
+
+
+        if(obj.classList.contains("account-btn")){
+            console.log(obj)
+        }
+        
     }
+
+    else if(obj.classList.contains("sign-out-btn")){
+        navibar.innerHTML="";
+        navibar.innerHTML=loginTab();
+        loggedInStudent="";
+        userObj="";
+        document.querySelector(".navbar").classList.add("hidden");
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(marketing());
+    }
+
+
+    else if(obj.classList.contains("account-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(accountModal(userObj));
+    }
+
+    
 
 })
 
 
 studentsBtn.addEventListener("click",(e)=>{
 
+    console.log(userObj);
     let obj=e.target;
 
     let contentDiv = document.querySelector(".content-div");
@@ -157,6 +198,7 @@ studentsBtn.addEventListener("click",(e)=>{
     contentDiv.appendChild(divForStudents());
     populateDivForStudents()
 
+    
 
 })
 
@@ -197,9 +239,28 @@ enrollsBtn.addEventListener("click",(e)=>{
 
 
 
+// document.querySelector(".navbar-parent").appendChild(signOutElement());
+            
+
+// add author to book modal 
+// add other info account in account modal
+
+// de ce la refresh ma scoate din cont
+// sign-up successfully to update
+// master account for course add and edit and data management through client
+// normal account with delete or enroll active 
+
+// landing page cu snap scroll 
+
+// cum putem ascunde parola din get user by ID 
 // mesaje logare user 
 // div user logat 
 // div logout  - vaiabila loggedInUser=""
 // landpage fara content, doar daca e logat, si optiunile
 // add enrollment 
 // cosmetizare erori
+// make enrollment
+// edit delete buttons with outline and hover transition
+// sign out button 
+// welcome after sign in 
+// 

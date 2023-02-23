@@ -5,7 +5,7 @@ function navbar(){
 
     <div class=" w-full  flex flex-row flex-nowrap items-center justify-center">
         <button type="button"
-            class=" students-btn border  border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+            class=" students-btn border hidden  border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none  hover:bg-teal-600 focus:outline-none focus:shadow-outline">
             Students
         </button>
 
@@ -20,17 +20,16 @@ function navbar(){
         </button>
 
         <button type="button"
-            class="enrolls-btn border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+            class="enrolls-btn hidden border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
             Enrollments
         </button>
+
+        <button type="button"
+        class="account-btn border border-teal-500 bg-teal-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-teal-600 focus:outline-none focus:shadow-outline">
+        Account
+        </button>
+        
     </div>
-
-
-    
-
-
-
-
 </div>
 
 
@@ -130,15 +129,15 @@ function bookModal(obj){
     // buy button
     let buyBtn = document.createElement("button");
     buyBtn.classList.add("book-modal-buy-btn") 
-    buyBtn.textContent = "Buy"
+    buyBtn.textContent = "Buy now"
     btnDiv.appendChild(buyBtn)
 
 
     // delete button
-    let delBtn = document.createElement("button");
-    delBtn.textContent="Delete";
-    delBtn.classList.add("book-modal-del-btn")
-    btnDiv.appendChild(delBtn)
+    // let delBtn = document.createElement("button");
+    // delBtn.textContent="Delete";
+    // delBtn.classList.add("book-modal-del-btn")
+    // btnDiv.appendChild(delBtn)
 
 
     let imgDiv = document.createElement("div");
@@ -239,15 +238,15 @@ function courseModal(obj){
     let editBtn = document.createElement("button");
     editBtn.classList.add("course-modal-edit-btn")
     
-    editBtn.textContent = "Edit"
+    editBtn.textContent = "Buy now"
     btnDiv.appendChild(editBtn)
 
 
     // delete button
-    let delBtn = document.createElement("button");
-    delBtn.textContent="Delete";
-    delBtn.classList.add("course-modal-del-btn")
-    btnDiv.appendChild(delBtn)
+    // let delBtn = document.createElement("button");
+    // delBtn.textContent="Delete";
+    // delBtn.classList.add("course-modal-del-btn")
+    // btnDiv.appendChild(delBtn)
 
 
     let imgDiv = document.createElement("div");
@@ -639,8 +638,12 @@ async function populateDivForStudents(){
 
 function createLoginMask(){
 
+
+
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("login-modal");
+    mainDiv.classList.add("shadow");
+
 
     let close = document.createElement("button");
     close.classList.add("login-modal-close-btn")
@@ -816,13 +819,162 @@ function createSignupMask(){
 
 }
 
-// master account for course add and edit and data management through client
-// normal account with delete or enroll active 
-// dupa login, tab de My Courses / Enrollments / User profile 
-//
-// landing page cu snap scroll 
-// sign-up 
-// dupa login putem afisa contentul
+
+function loggedInUserTab(obj){
+
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("logged-in-user");
+
+
+
+
+    return mainDiv;
+}
+
+
+
+function loginErrorMsg(error){
+
+    
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("login-error");
+    mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+}
+
+
+function removeLoginErrorMsg(){
+
+    let err = document.querySelector(".login-error")
+    let modal = document.querySelector(".login-modal")
+    modal.removeChild(err)
+
+}
+
+// function welcomeLogin(user){
+
+//     let mainDiv = document.createElement("div");
+//     mainDiv.classList.add("login-welcome");
+
+//     let text = document.createElement("p");
+//     text.classList.add("login-intro");
+//     mainDiv.appendChild(text);
+//     text.textContent=`Hi, ${user.first_name}`
+
+
+    
+
+
+//     return mainDiv;
+
+// }
+
+
+function signOutElement(){
+
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("sign-out-element-div");
+
+    let btn=document.createElement("button");
+    btn.classList.add("sign-out-btn");
+    mainDiv.appendChild(btn);
+    btn.textContent="Sign out";
+    
+    return mainDiv;
+
+}
+
+
+function signedIdInfoLabel(email){
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("signed-info-label-div");
+
+    
+
+
+    return mainDiv;
+}
+
+
+
+function accountModal(obj){
+
+    
+    // first_name
+    // last_name
+    // email
+    // age
+
+    // main container
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("account-modal");
+    mainDiv.id = obj.id
+
+
+
+
+
+    let imgDiv = document.createElement("div");
+    imgDiv.classList.add("account-modal-img-div")
+    mainDiv.appendChild(imgDiv)
+
+    let poster = document.createElement("img");
+    poster.src = "./images/student-logo.png"
+    poster.id = "account-logo"
+    imgDiv.appendChild(poster)
+    
+
+    // info div 
+    let secondDiv = document.createElement("div");
+    secondDiv.classList.add("account-modal-info-div")
+    mainDiv.appendChild(secondDiv)
+
+    let nameDiv = document.createElement("div");
+    nameDiv.classList.add("account-namediv-modal-info-div")
+    secondDiv.appendChild(nameDiv)
+
+    let first_name = document.createElement("p");
+    nameDiv.appendChild(first_name);
+    first_name.id="account-first-name"
+    first_name.textContent =`Welcome, `+ obj.first_name+" " +obj.last_name;
+
+
+    let email = document.createElement("p");
+    secondDiv.appendChild(email);
+    email.id="account-email"
+    email.textContent = obj.email;
+
+
+    let age = document.createElement("p");
+    secondDiv.appendChild(age);
+    age.id="account-age"
+    age.textContent = "Age "+obj.age;
+
+
+
+    return mainDiv;
+}
+
+
+// function welcomeSignUp(user){
+//     let mainDiv = document.createElement("div");
+//     mainDiv.classList.add("sign-out-element-div");
+
+//     let btn=document.createElement("button");
+//     btn.classList.add("sign-out-btn");
+//     mainDiv.appendChild(btn);
+//     btn.textContent="Sign out";
+    
+//     return mainDiv;
+// }
+
+
 
 
 

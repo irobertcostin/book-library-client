@@ -45,36 +45,58 @@ function api(path,method='GET',body=null){
 
 async function getBooksApi(){
 
+try {
     let data = await api(`/books/all`)
 
     return data.json();
 
+} catch (error) {
+    console.log(error)
+}
 }
 
 
 async function getCoursesApi(){
 
-    let data = await api(`/courses/all`)
 
-    return data.json();
+
+    try {
+        let data = await api(`/courses/all`)
+
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 
 async function getEnrollmentsApi(){
 
-    let data = await api(`/enrollments/all`)
 
-    return data.json();
+
+    try {
+        let data = await api(`/enrollments/all`)
+
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 
 async function getStudentsApi(){
 
-    let data = await api(`/students/all`)
 
-    return data.json();
+
+    try {
+        let data = await api(`/students/all`)
+
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
@@ -82,33 +104,69 @@ async function getStudentsApi(){
 async function getBookByIdApi(id){
 
     
-    let data = await api(`/books/by-id/id=${id}`)
-    return data.json();
+
+
+    try {
+        let data = await api(`/books/by-id/id=${id}`)
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 async function getEnrollmentById(id){
 
-    let data = await api(`/enrollments/by-id/id=${id}`)
 
-    return data.json();
+
+    try {
+        let data = await api(`/enrollments/by-id/id=${id}`)
+
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 
 async function getStudentById(id){
 
-    let data = await api(`/students/by-id/id=${id}`)
+
+
+    try {    let data = await api(`/students/by-id/id=${id}`)
 
     return data.json();
+        
+    } catch (error) {
+        console.log(error)
+    }
+
+}
+
+async function getStudentByEmail(email){
+
+
+
+    try {    let data = await api(`/students/by-email/email=${email}`)
+
+    return data.json();
+        
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 async function getCourseById(id){
 
+try {
     let data = await api(`/courses/by-id/id=${id}`)
 
     return data.json();
+} catch (error) {
+    console.log(error)
+}
 
 }
 
@@ -118,27 +176,39 @@ async function getCourseById(id){
 
 async function addBook(book){
 
-    // FETCH with url attribute , method POST and an object
-    let data = await api("/books/add","POST",book)
-    return data.json()
+   try {
+     // FETCH with url attribute , method POST and an object
+     let data = await api("/books/add","POST",book)
+     return data.json()
+   } catch (error) {
+    console.log(error)
+   }
 
 }
 
 
 async function addCourse(course){
 
-    // FETCH with url attribute , method POST and an object
+    try {
+        // FETCH with url attribute , method POST and an object
     let data = await api("/courses/add","POST",course)
     return data.json()
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
 
 async function addEnrollments(enrollment){
 
-    // FETCH with url attribute , method POST and an object
+    try {
+        // FETCH with url attribute , method POST and an object
     let data = await api("/enrollments/add","POST",enrollment)
     return data.json()
+    } catch (error) {
+        console.log(error)
+    }
 
 }
 
@@ -155,10 +225,6 @@ async function addStudent(student){
         }else {
             // bring in client
             alert("Successfully registered, please login")
-            contentDiv.innerHTML="";
-        contentDiv.appendChild(createLoginMask())
-            
-
 
         }
 
@@ -168,40 +234,56 @@ async function addStudent(student){
 
 }
 
-let loggedInStudent={};
+
+
+
+let loggedInStudent;
+let loginError;
+let userObj;
+
 
 async function login(user){
 
 
+    if(document.querySelector(".login-error")){
+        
+        document.querySelector(".login-modal").removeChild(document.querySelector(".login-error"))
+        // setTimeout(removeLoginErrorMsg(),3000) 
+    }
+
+    
+
+    loggedInStudent="";
+    loginError=""
+
     try {
+            
         let data = await api("/students/login","POST",user);
 
 
     if(data.status!=212){
 
+        // maybe switch from alert to something else 
         let response = await data.json();
-        alert(response.error.message); 
+        // alert(response.error.message); 
+        document.querySelector(".login-modal").insertBefore(loginErrorMsg(response.error.message),document.querySelector(".login-modal-login-btn"))
+        
+        // console.log(loginStatus)
 
         // function to retrieve a user by email
         // and set it as the loggedInUser
     }else if(data.status==212){
-        let response = await data.json();
-        alert(response)
-        contentDiv.innerHTML=""
+        
+        loggedInStudent=user.email;
+        
+        // console.log(loginStatus)
+        // alert(user.email)
+        
     }
-
-
-
-    
     } catch (error) {
         console.log(error)
     }
-
-
-
     
-
-
 }
 
 
@@ -209,33 +291,61 @@ async function login(user){
 
 async function deleteBook(id){
 
-    let data = await api('/books/delete/id='+id,"DELETE");
 
-    return data.json("Book successfully deleted");
+
+    try {
+        let data = await api('/books/delete/id='+id,"DELETE");
+
+        return data.json("Book successfully deleted");
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 
 async function deleteCourse(id){
 
-    let data = await api('/courses/delete/id='+id,"DELETE");
 
-    return data.json("Course successfully deleted");
+
+    try {
+        let data = await api('/courses/delete/id='+id,"DELETE");
+
+        return data.json("Course successfully deleted");
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 
 async function deleteEnrollment(id){
 
-    let data = await api('/enrollments/delete/id='+id,"DELETE");
 
-    return data.json("Enrollment successfully deleted");
+
+    try {
+        let data = await api('/enrollments/delete/id='+id,"DELETE");
+
+        return data.json("Enrollment successfully deleted");
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 
 async function deleteStudent(id){
 
-    let data = await api('/students/delete/id='+id,"DELETE");
+   
 
-    return data.json("Student successfully deleted");
+    try {
+        let data = await api('/students/delete/id='+id,"DELETE");
+
+        return data.json("Student successfully deleted");
+    } catch (error) {
+        console.log(error)
+    }
+    
 }
 
 
@@ -271,6 +381,8 @@ async function editBookApi(book,id){
 
     }
 
+
+    
 
     
 
