@@ -110,7 +110,7 @@ async function getBookByIdApi(id){
         let data = await api(`/books/by-id/id=${id}`)
         return data.json();
     } catch (error) {
-        console.log(error)
+        alert(error)
     }
 
 }
@@ -412,12 +412,38 @@ async function editBookApi(book,id){
         console.log(e);
 
     }
+}
 
 
+
+async function editStudentApi(user,id){
+
+    try{
+
+        // when this line finishes, the object is already modified
+    let data = await api('/students/edit/id='+id,"PUT",user);
+
+    // expect data with status , as build in the api
+    if(data.status!=210){
+
+        // await the error message as a json object
+        let response= await data.json();
+        
+        alert(response.error.message)
+
+
+        
+    } else if(data.status===210) {
+
+        alert("Account information edited successfully")
+        // return data.json(car);
+    }
     
+    }catch(e){
 
-    
 
+        console.log(e);
 
+    }
 }
 

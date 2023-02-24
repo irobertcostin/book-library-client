@@ -176,7 +176,7 @@ main.addEventListener("click",async(e)=>{
         contentDiv.innerHTML="";
         contentDiv.appendChild(accountModal(userObj));
         let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
-        console.log(userEnrolls)
+        // console.log(userEnrolls)
         populateAccountEnrolls(userEnrolls);
         
     }
@@ -197,6 +197,42 @@ main.addEventListener("click",async(e)=>{
 
         await addEnrollments(enrollment);
 
+    } else if(obj.classList.contains("edit-account-info-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(studentModalEdit(userObj))
+    }   else if(obj.classList.contains("save-info-account-btn")){
+
+        let first=document.getElementById("student-edit-first-name").value;
+        let last=document.getElementById("student-edit-last-name").value;
+        let age=+document.getElementById("student-edit-age").value;
+
+
+        console.log(first)
+        console.log(last)
+        console.log(age);
+
+        let user = {
+
+            first_name:first,  
+            last_name:last,
+            age:age
+        }
+
+        await editStudentApi(user,userObj.id)
+
+        contentDiv.innerHTML="";
+        userObj = await getStudentByEmail(loggedInStudent);
+        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+        // console.log(userEnrolls)
+        contentDiv.appendChild(accountModal(userObj));
+        populateAccountEnrolls(userEnrolls);
+
+    }else if(obj.classList.contains("book-modal-edit-btn")){
+        // console.log(obj.parentNode.parentNode);
+        let book = await getBookByIdApi(obj.parentNode.parentNode.id)
+        console.log(book)
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(editBookModal(book));
     }
 
     
