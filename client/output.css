@@ -1610,8 +1610,22 @@ position: relative; */
   align-items: center;
 }
 
-.signed-info-label-div p {
-  /* border: 2px solid white; */
+.account-enrolls-modal-info-div{
+  border: 2px solid white;
+  width: 100%;
+  color: white;
+  margin-top: 40px;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-enrolls-modal-list-div{
+  border: 2px solid red;
+  width: 100%;
 }
 
 @media (min-width:700px) {
