@@ -179,6 +179,27 @@ main.addEventListener("click",async(e)=>{
         contentDiv.appendChild(accountModal(userObj));
     }
 
+    else if(obj.classList.contains("course-modal-enroll-btn")){
+
+        let courseId=obj.parentNode.parentNode.id
+        let userId=userObj.id;
+        console.log(courseId)
+        console.log(userId)
+        let created_at = new Date();
+        console.log(created_at)
+
+        let enrollment = {
+
+            student_id:userId,
+            course_id:courseId,
+            created_at:created_at
+
+        }
+
+        await addEnrollments(enrollment);
+
+    }
+
     
 
 })
@@ -232,16 +253,12 @@ enrollsBtn.addEventListener("click",(e)=>{
     populateDivForEnrollments()
 
 })
-
-
-
-// document.querySelector(".navbar-parent").appendChild(signOutElement());
-            
+        
 
 // add author to book modal 
 // add other info account in account modal
 
-// de ce la refresh ma scoate din cont
+
 // sign-up successfully to update
 // master account for course add and edit and data management through client
 // normal account with delete or enroll active 

@@ -236,9 +236,9 @@ function courseModal(obj){
     
     // edit button
     let editBtn = document.createElement("button");
-    editBtn.classList.add("course-modal-edit-btn")
+    editBtn.classList.add("course-modal-enroll-btn")
     
-    editBtn.textContent = "Buy now"
+    editBtn.textContent = "Enroll"
     btnDiv.appendChild(editBtn)
 
 
