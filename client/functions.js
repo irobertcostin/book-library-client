@@ -900,8 +900,9 @@ function signedIdInfoLabel(email){
     let mainDiv = document.createElement("div");
     mainDiv.classList.add("signed-info-label-div");
 
-    
-
+    let label = document.createElement("p");
+    label.textContent=email;
+    mainDiv.appendChild(label)
 
     return mainDiv;
 }

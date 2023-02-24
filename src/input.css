@@ -4,7 +4,7 @@
 
 
 
-.book-modal{
+.book-modal {
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
@@ -23,7 +23,7 @@
 }
 
 
-#book-modal-btn-div{
+#book-modal-btn-div {
     /* border: 2px solid red; */
     border-radius: 20px;
     display: flex;
@@ -48,9 +48,10 @@
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
+
 .book-modal-buy-btn {
     background-color: rgb(22, 81, 198);
     padding-left: 15px;
@@ -61,7 +62,7 @@
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -76,7 +77,7 @@
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -96,7 +97,7 @@
     width: 75px;
 }
 
-.book-modal-info-div{
+.book-modal-info-div {
 
     /* border: 2px solid green; */
     color: white;
@@ -108,8 +109,8 @@
 
 }
 
-.content-div{
-margin-top: 50px;
+.content-div {
+    margin-top: 50px;
 
 
 }
@@ -117,7 +118,7 @@ margin-top: 50px;
 
 
 
-.course-modal{
+.course-modal {
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
@@ -136,7 +137,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
 }
 
 
-#course-modal-btn-div{
+#course-modal-btn-div {
     /* border: 2px solid red; */
     border-radius: 7px;
     display: flex;
@@ -161,7 +162,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -175,7 +176,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -195,7 +196,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
     width: 75px;
 }
 
-.course-modal-info-div{
+.course-modal-info-div {
 
     /* border: 2px solid green; */
     color: white;
@@ -208,7 +209,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
 
 
 
-.enrollment-modal{
+.enrollment-modal {
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
@@ -217,7 +218,7 @@ box-shadow: 2px 2px 6px 2px #00ffff7e; */
     position: relative;
     margin: auto;
 
-   
+
 
     display: grid;
     grid-template-columns: 30% 70%;
@@ -230,7 +231,7 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
 }
 
 
-#enrollment-modal-btn-div{
+#enrollment-modal-btn-div {
     /* border: 2px solid red; */
     border-radius: 20px;
     display: flex;
@@ -255,9 +256,10 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
+
 .extended-enrollment-modal-edit-btn {
     background-color: rgb(22, 81, 198);
     padding-left: 8px;
@@ -267,9 +269,9 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     text-align: center;
     border-radius: 5px;
     font-size: 15px;
-    
+
     color: white;
-    
+
 
 }
 
@@ -283,7 +285,7 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -297,12 +299,12 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
-.extended-enrollment-modal-close-btn{
-     background-color: rgb(138, 23, 167);
+.extended-enrollment-modal-close-btn {
+    background-color: rgb(138, 23, 167);
     padding-left: 8px;
     padding-right: 8px;
     padding-top: 3px;
@@ -332,11 +334,11 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     height: auto;
     background-color: rgba(0, 116, 109, 0.459);
     padding-bottom: 40px;
-    
+
 }
 
 
-#extended-enrollment-modal-btn-div{
+#extended-enrollment-modal-btn-div {
     width: 100%;
     /* border: 2px solid white;     */
 
@@ -345,7 +347,7 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     padding: 10px;
     gap: 20px;
 
-    
+
 }
 
 .extended-student-modal-info-div {
@@ -374,12 +376,12 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
 
 
 
-#extended-student-name-label{
+#extended-student-name-label {
     font-weight: 700;
     margin-bottom: 7px;
 }
 
-#extended-course-name-label{
+#extended-course-name-label {
     font-weight: 700;
     margin-bottom: 7px;
 }
@@ -388,17 +390,18 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
     width: 75px;
 }
 
-.enrollment-modal-info-div{
+.enrollment-modal-info-div {
 
 
-     color: white;
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-     justify-content: center;
-     align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 
 }
+
 .logo {
     /* border: 2px solid red; */
     /* width: 200px; */
@@ -408,10 +411,10 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
 
 .logo img {
     cursor: pointer;
-    
+
 }
 
-.namediv-modal-info-div{
+.namediv-modal-info-div {
 
     /* border: 2px solid red; */
     width: 100%;
@@ -424,21 +427,22 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
 
 }
 
-#student-last-name{
-width: 100%;
-display: flex;
-align-items: center;
-
-}
-#student-first-name{
+#student-last-name {
     width: 100%;
     display: flex;
-align-items: center;
-justify-content: flex-end;
+    align-items: center;
+
+}
+
+#student-first-name {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 
-.student-modal{
+.student-modal {
     width: 350px;
     height: 200px;
     /* border: 2px solid green; */
@@ -456,7 +460,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 }
 
 
-#student-modal-btn-div{
+#student-modal-btn-div {
     /* border: 2px solid red; */
     border-radius: 20px;
     display: flex;
@@ -481,7 +485,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -495,7 +499,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
     border-radius: 3px;
     font-size: 13px;
     color: white;
-    
+
 
 }
 
@@ -515,7 +519,7 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
     width: 75px;
 }
 
-.student-modal-info-div{
+.student-modal-info-div {
 
     /* border: 2px solid green; */
     color: white;
@@ -539,15 +543,15 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 
     height: auto;
     width: 100%;
-    
+
 }
 
-#div-for-books-label{
+#div-for-books-label {
     color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
-    
+
 }
 
 .div-for-courses-content {
@@ -561,15 +565,15 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 
     height: auto;
     width: 100%;
-    
+
 }
 
-#div-for-courses-label{
+#div-for-courses-label {
     color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
-    
+
 }
 
 
@@ -585,15 +589,15 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 
     height: auto;
     width: 100%;
-    
+
 }
 
-#div-for-enrollments-label{
+#div-for-enrollments-label {
     color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
-    
+
 }
 
 
@@ -608,19 +612,19 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 
     height: auto;
     width: 100%;
-    
-    
+
+
 }
 
-#div-for-students-label{
+#div-for-students-label {
     color: #14B8A6;
     font-size: 20px;
     font-weight: bold;
     padding: 20px;
-    
+
 }
 
-.div-for-marketing{
+.div-for-marketing {
     /* border: 2px solid red; */
     padding: 20px;
 
@@ -631,31 +635,31 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
 
     margin-top: 50px;
     -webkit-animation: div-for-marketing 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-	        animation: div-for-marketing 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-    
+    animation: div-for-marketing 0.5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+
 }
 
-.land-img{
+.land-img {
     min-width: 1000px;
     max-width: 1000px;
 }
 
 
 
-#enrollment-id-label{
-color: rgba(255, 255, 255, 0.756);
-/* border: 2px solid red; */
-display: flex;
-padding-top: 10px;
-padding-left: 10px;
-font-size: 12px;
+#enrollment-id-label {
+    color: rgba(255, 255, 255, 0.756);
+    /* border: 2px solid red; */
+    display: flex;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 12px;
 }
 
 
 
 
 
-.login-modal{
+.login-modal {
     width: 100%;
     height: auto;
     background-color: #212a37;
@@ -670,10 +674,10 @@ font-size: 12px;
     border-radius: 7px;
     margin-top: 50px;
 
-}   
+}
 
 
-.signup-modal{
+.signup-modal {
     width: 100%;
     height: auto;
     background-color: #212a37;
@@ -689,9 +693,10 @@ font-size: 12px;
     /* margin-top: 50px; */
 
 
-    
+
 }
-.login-modal-close-btn{
+
+.login-modal-close-btn {
     background-color: #14B8A6;
     padding-left: 8px;
     padding-right: 8px;
@@ -706,8 +711,8 @@ font-size: 12px;
 }
 
 
-.shadow{
-/*     
+.shadow {
+    /*     
 background: linear-gradient(-45deg, #ff3d00 0%, #0400ff 100% );
 transform: translate3d(0px, 20px, 0) scale(0.95);
 filter: blur(20px);
@@ -720,7 +725,7 @@ position: relative; */
 
 
 
-.signup-modal-close-btn{
+.signup-modal-close-btn {
     background-color: #EF4444;
     padding-left: 8px;
     padding-right: 8px;
@@ -734,7 +739,7 @@ position: relative; */
     margin-left: auto;
 }
 
-#login-modal-label{
+#login-modal-label {
     margin-top: 40px;
     font-size: 20px;
     font-weight: 700;
@@ -743,7 +748,7 @@ position: relative; */
 }
 
 
-.login-modal-email-div{
+.login-modal-email-div {
 
     /* border: 2px solid white; */
     width: 100%;
@@ -754,7 +759,7 @@ position: relative; */
 
 }
 
-.signup-modal-email-div{
+.signup-modal-email-div {
 
     /* border: 2px solid white; */
     width: 100%;
@@ -765,29 +770,17 @@ position: relative; */
 
 }
 
-#login-modal-email-label{
+#login-modal-email-label {
     color: rgba(255, 255, 255, 0.809);
     font-size: 15px;
 }
 
-#signup-modal-email-label{
+#signup-modal-email-label {
     color: rgba(255, 255, 255, 0.809);
     font-size: 15px;
 }
 
-.login-modal-pass-div{
-
-    /* border: 2px solid white; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 30px;
-    max-width: 350px;
-
-}
-
-.signup-modal-pass-div{
+.login-modal-pass-div {
 
     /* border: 2px solid white; */
     width: 100%;
@@ -799,7 +792,19 @@ position: relative; */
 
 }
 
-.signup-modal-other-info-div{
+.signup-modal-pass-div {
+
+    /* border: 2px solid white; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 30px;
+    max-width: 350px;
+
+}
+
+.signup-modal-other-info-div {
 
     /* border: 2px solid white; */
     width: 100%;
@@ -813,58 +818,61 @@ position: relative; */
 
 
 
-#login-modal-pass-label{
-    color: rgba(255, 255, 255, 0.809);
-    font-size: 15px;
-}
-#signup-modal-pass-label{
+#login-modal-pass-label {
     color: rgba(255, 255, 255, 0.809);
     font-size: 15px;
 }
 
-#signup-modal-first-name-label{
+#signup-modal-pass-label {
     color: rgba(255, 255, 255, 0.809);
     font-size: 15px;
 }
 
-#signup-modal-last-name-label{
+#signup-modal-first-name-label {
     color: rgba(255, 255, 255, 0.809);
     font-size: 15px;
 }
 
-#signup-modal-age-name-label{
+#signup-modal-last-name-label {
+    color: rgba(255, 255, 255, 0.809);
+    font-size: 15px;
+}
+
+#signup-modal-age-name-label {
     color: rgba(255, 255, 255, 0.809);
     font-size: 15px;
 }
 
 
-#login-modal-email-input{
+#login-modal-email-input {
     outline: none;
     border: none;
     padding: 1px;
     padding-left: 4px;
 }
 
-#login-modal-pass-input{
-    outline: none;
-    border: none;
-    padding: 1px;
-    padding-left: 4px;
-}
-#signup-modal-email-input{
+#login-modal-pass-input {
     outline: none;
     border: none;
     padding: 1px;
     padding-left: 4px;
 }
 
-#signup-modal-pass-input{
+#signup-modal-email-input {
     outline: none;
     border: none;
     padding: 1px;
     padding-left: 4px;
 }
-.login-modal-login-btn{
+
+#signup-modal-pass-input {
+    outline: none;
+    border: none;
+    padding: 1px;
+    padding-left: 4px;
+}
+
+.login-modal-login-btn {
     margin: 40px;
     margin-top: 90px;
     background-color: #14B8A6;
@@ -876,7 +884,7 @@ position: relative; */
     /* font-weight: 700; */
 }
 
-.signup-modal-signup-btn{
+.signup-modal-signup-btn {
     margin: 40px;
     margin-top: 70px;
     background-color: #EF4444;
@@ -888,13 +896,13 @@ position: relative; */
     /* font-weight: 700; */
 }
 
-#login-modal-reg-label{
+#login-modal-reg-label {
     margin-top: 30px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.653);
 }
 
-#signup-modal-reg-label{
+#signup-modal-reg-label {
     margin-top: 30px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.653);
@@ -915,13 +923,13 @@ position: relative; */
     padding: 20px;
 }
 
-.account-modal-img-div{
+.account-modal-img-div {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    
+
 }
 
 .account-modal-img-div img {
@@ -934,7 +942,7 @@ position: relative; */
 }
 
 
-.account-modal-info-div{
+.account-modal-info-div {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -945,130 +953,7 @@ position: relative; */
 }
 
 
-@media  (min-width:700px){
-
-   
-#extended-enrollment-modal-btn-div{
-    grid-area: btn;
-    /* border: 2px solid white; */
-    margin-bottom: 30px;
-}
-
-.extended-student-modal-info-div{
-    grid-area: stu;
-    /* min-height: 500px; */
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-.extended-course-modal-info-div{
-    grid-area: cou;
-    /* min-height: 500px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-#enrollment-id-label{
-    color: rgba(255, 255, 255, 0.756);
-    /* border: 2px solid red; */
-    display: flex;
-    font-size: 14px;
-    grid-area: label;
-    margin-top: 30px;
-    }
-.extended-enrollment-details {
-    /* border: 2px solid red; */
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-right: 40px;
-    display: grid;
-    grid-template-areas: 'btn btn' 'stu cou''label label';
-
-    min-width: 700px;
-    max-width: 700px;
-
-    margin-top: 100px;
-    align-self: center;
-    
-}
-
-.content-div{
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
-}
-    
-
-}
-
-
-.sign-out-btn{
-
-display: block;
-
-margin-top: 0px;
-width: 77px;
-height: 36px;
-background-color: #EF4444;
-color: white;
-font-size: 12px;
-border-radius: 6px;
-margin-left: auto;
-margin-right: 20px;
-
-
-
-}
-
-.sign-out-btn:hover{
-    background-color: #d12929;
-    transition: 0.5s ease-in-out;
-}
-
-
-.sign-out-element-div{
-
-    width: 100%;
-    display: flex;
-    padding-top: 60px;
-
-}
-
-
-
-
-
-@media  (min-width:1000px) {
-    .div-for-students-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .div-for-books-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-    }
-
-    .div-for-courses-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-    }
-
-    .div-for-enrollments-content{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr ;
-    }
-    .sign-out-btn{
-        width: 112px;
-        height: 45px;
-        font-size: 20px;
-    }
-}
-
-
-.login-error{
+.login-error {
     min-width: 250px;
     max-width: 400px;
     height: 40px;
@@ -1082,34 +967,213 @@ margin-right: 20px;
     align-items: center;
 }
 
+
+.sign-out-btn {
+
+    display: block;
+
+    margin-top: 0px;
+    width: 77px;
+    height: 36px;
+    background-color: #EF4444;
+    color: white;
+    font-size: 12px;
+    border-radius: 6px;
+    /* margin-left: auto; */
+    margin-right: 20px;
+
+
+
+}
+
+.sign-out-btn:hover {
+    background-color: #d12929;
+    transition: 0.5s ease-in-out;
+}
+
+
+.sign-out-element-div {
+
+    width: 100%;
+    display: flex;
+    padding-top: 60px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.signed-info-label-div{
+width: 150px;
+height: 35px;
+color: white;
+/* background-color: red; */
+/* border: 2px solid red; */
+margin-left: auto;
+font-size: 12px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.signed-info-label-div p {
+
+    /* border: 2px solid white; */
+}
+
+
+@media (min-width:700px) {
+
+
+    #extended-enrollment-modal-btn-div {
+        grid-area: btn;
+        /* border: 2px solid white; */
+        margin-bottom: 30px;
+    }
+
+    .extended-student-modal-info-div {
+        grid-area: stu;
+        /* min-height: 500px; */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .extended-course-modal-info-div {
+        grid-area: cou;
+        /* min-height: 500px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #enrollment-id-label {
+        color: rgba(255, 255, 255, 0.756);
+        /* border: 2px solid red; */
+        display: flex;
+        font-size: 14px;
+        grid-area: label;
+        margin-top: 30px;
+    }
+
+    .extended-enrollment-details {
+        /* border: 2px solid red; */
+        padding-left: 40px;
+        padding-top: 20px;
+        padding-right: 40px;
+        display: grid;
+        grid-template-areas: 'btn btn' 'stu cou' 'label label';
+
+        min-width: 700px;
+        max-width: 700px;
+
+        margin-top: 100px;
+        align-self: center;
+
+    }
+
+    .content-div {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+
+}
+
+@media (min-width:1000px) {
+    .div-for-students-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .div-for-books-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .div-for-courses-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .div-for-enrollments-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .sign-out-btn {
+        width: 112px;
+        height: 45px;
+        font-size: 20px;
+    }
+}
+
 @keyframes flickerAnimation {
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-o-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-moz-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-  }
-  @-webkit-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-  }
-  .animate-flicker {
-     -webkit-animation: flickerAnimation .5s infinite;
-     -moz-animation: flickerAnimation .5s infinite;
-     -o-animation: flickerAnimation .5s infinite;
-      animation: flickerAnimation .5s infinite;
-  }
-  
-  
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes flickerAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-flicker {
+    -webkit-animation: flickerAnimation .5s infinite;
+    -moz-animation: flickerAnimation .5s infinite;
+    -o-animation: flickerAnimation .5s infinite;
+    animation: flickerAnimation .5s infinite;
+}
+
+
 
 
 
@@ -1125,34 +1189,35 @@ focus:shadow-outline */
 
 
 @-webkit-keyframes div-for-marketing {
-  
-      0% {
-        -webkit-transform: translateX(0) translateZ(0) rotateY(0);
-                transform: translateX(0) translateZ(0) rotateY(0);
-        -webkit-transform-origin: 100% 50%;
-                transform-origin: 100% 50%;
-      }
-      100% {
-        -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
-                transform: translateX(100%) translateZ(160px) rotateY(-180deg);
-        -webkit-transform-origin: 0% 50%;
-                transform-origin: 0% 50%;
-      }
-  }
-  
 
-  @keyframes div-for-marketing {
-    100% {
-      -webkit-transform: translateX(0) translateZ(0) rotateY(0);
-              transform: translateX(0) translateZ(0) rotateY(0);
-      -webkit-transform-origin: 100% 50%;
-              transform-origin: 100% 50%;
-    }
     0% {
-      -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
-              transform: translateX(100%) translateZ(160px) rotateY(-180deg);
-      -webkit-transform-origin: 0% 50%;
-              transform-origin: 0% 50%;
+        -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+        transform: translateX(0) translateZ(0) rotateY(0);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
     }
-  }
-  
+
+    100% {
+        -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+    }
+}
+
+
+@keyframes div-for-marketing {
+    100% {
+        -webkit-transform: translateX(0) translateZ(0) rotateY(0);
+        transform: translateX(0) translateZ(0) rotateY(0);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+    }
+
+    0% {
+        -webkit-transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        transform: translateX(100%) translateZ(160px) rotateY(-180deg);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+    }
+}

@@ -125,12 +125,8 @@ main.addEventListener("click",async(e)=>{
 
         }
 
-        let response = await addStudent(student);
-        contentDiv.innerHTML="";
-        contentDiv.appendChild(createLoginMask())
-        console.log(response)
+            await addStudent(student);
             
-        
     } else if(obj.classList.contains("login-modal-login-btn")){
 
         
@@ -144,7 +140,7 @@ main.addEventListener("click",async(e)=>{
         }
 
 
-       
+    
 
         await login(user)
         
@@ -155,10 +151,9 @@ main.addEventListener("click",async(e)=>{
             document.querySelector(".navbar-parent").appendChild(signOutElement());
             userObj = await getStudentByEmail(loggedInStudent);
             contentDiv.appendChild(accountModal(userObj));
+            document.querySelector(".sign-out-element-div").insertBefore(signedIdInfoLabel(userObj.email),document.querySelector(".sign-out-btn"))
             
             
-            
-
         }
 
 

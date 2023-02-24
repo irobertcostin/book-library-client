@@ -213,20 +213,29 @@ async function addEnrollments(enrollment){
 }
 
 
+
+let alreadyReg;
+
+
 async function addStudent(student){
+
+    
     
     // FETCH with url attribute , method POST and an object
     try {
         let data = await api("/students/add","POST",student)
 
         if(data.status!=201){
+
             let response = await data.json();
-            // console.log(response)
             alert(response)
         }else {
             // bring in client
             alert("Successfully registered, please login")
-
+            // return data.json();
+            contentDiv.innerHTML="";
+            contentDiv.appendChild(createLoginMask())
+            
         }
 
     } catch (error) {
