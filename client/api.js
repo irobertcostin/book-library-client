@@ -172,6 +172,19 @@ try {
 
 
 
+async function getEnrollmentByStudentsId(id){
+
+    try {
+        let data = await api(`/enrollments/by-student-id/id=${id}`)
+        return data.json();
+    } catch (error) {
+        console.log(error)
+    }
+
+
+}
+
+
 // POST methods
 
 async function addBook(book){
@@ -205,7 +218,16 @@ async function addEnrollments(enrollment){
     try {
         // FETCH with url attribute , method POST and an object
     let data = await api("/enrollments/add","POST",enrollment)
-    return data.json()
+
+        if(data.status!=202){
+
+            let response = await data.json();
+            
+            alert(response.error.message)
+
+        }else {
+            alert("Successfully enrolled")
+        }
     } catch (error) {
         console.log(error)
     }

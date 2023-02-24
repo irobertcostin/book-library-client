@@ -150,15 +150,13 @@ main.addEventListener("click",async(e)=>{
             document.querySelector(".navbar-parent").innerHTML="";
             document.querySelector(".navbar-parent").appendChild(signOutElement());
             userObj = await getStudentByEmail(loggedInStudent);
+            
+            let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
             contentDiv.appendChild(accountModal(userObj));
+            
             document.querySelector(".sign-out-element-div").insertBefore(signedIdInfoLabel(userObj.email),document.querySelector(".sign-out-btn"))
+            populateAccountEnrolls(userEnrolls);
             
-            
-        }
-
-
-        if(obj.classList.contains("account-btn")){
-            console.log(obj)
         }
         
     }
@@ -177,21 +175,22 @@ main.addEventListener("click",async(e)=>{
     else if(obj.classList.contains("account-btn")){
         contentDiv.innerHTML="";
         contentDiv.appendChild(accountModal(userObj));
+        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+        console.log(userEnrolls)
+        populateAccountEnrolls(userEnrolls);
+        
     }
 
     else if(obj.classList.contains("course-modal-enroll-btn")){
 
         let courseId=obj.parentNode.parentNode.id
         let userId=userObj.id;
-        console.log(courseId)
-        console.log(userId)
         let created_at = new Date();
-        console.log(created_at)
 
         let enrollment = {
 
             student_id:userId,
-            course_id:courseId,
+            course_id:+courseId,
             created_at:created_at
 
         }

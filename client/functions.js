@@ -962,9 +962,36 @@ function accountModal(obj){
     age.id="account-age"
     age.textContent = "Age "+obj.age;
 
+    let enrollsDiv = document.createElement("div");
+    enrollsDiv.classList.add("account-enrolls-modal-info-div")
+    mainDiv.appendChild(enrollsDiv);
+
+    let enrollsLabel = document.createElement("label");
+    enrollsLabel.classList.add("account-enrolls-modal-info-label")
+    enrollsDiv.appendChild(enrollsLabel);
+    enrollsLabel.textContent="Your enrollments"
+    
+    
 
 
     return mainDiv;
+}
+
+
+function populateAccountEnrolls(arr){
+
+    let main = document.createElement("div");
+    main.classList.add("account-enrolls-modal-list-div")
+    
+
+    let list = document.querySelector(".account-enrolls-modal-info-div")
+    for(let i =0;i<arr.length;i++){
+
+        list.appendChild(enrollmentModal(arr[i]))
+    }
+
+    return main;
+
 }
 
 
