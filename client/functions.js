@@ -128,8 +128,8 @@ function bookModal(obj){
 
     // buy button
     let buyBtn = document.createElement("button");
-    buyBtn.classList.add("book-modal-buy-btn") 
-    buyBtn.textContent = "Buy now"
+    buyBtn.classList.add("book-modal-edit-btn") 
+    buyBtn.textContent = "Edit"
     btnDiv.appendChild(buyBtn)
 
 
@@ -923,6 +923,10 @@ function accountModal(obj){
     mainDiv.id = obj.id
 
 
+    let editBtn = document.createElement("button");
+    editBtn.textContent="Edit your profile information";
+    editBtn.classList.add("edit-account-info-btn")
+    mainDiv.appendChild(editBtn)
 
 
 
@@ -992,6 +996,146 @@ function populateAccountEnrolls(arr){
 
     return main;
 
+}
+
+
+
+
+function studentModalEdit(obj){
+
+    
+    // first_name
+    // last_name
+    // email
+    // age
+
+    // main container
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("student-modal-edit");
+    mainDiv.id = obj.id
+
+
+    let label = document.createElement("label");
+    label.textContent="Edit your profile information"
+    mainDiv.appendChild(label)
+
+
+    // info div 
+    let secondDiv = document.createElement("div");
+    secondDiv.classList.add("student-modal-edit-info-div")
+    mainDiv.appendChild(secondDiv)
+
+    let nameDiv = document.createElement("div");
+    nameDiv.classList.add("namediv-modal-edit-info-div")
+    secondDiv.appendChild(nameDiv)
+    // nameDiv.textContent="Name"
+
+    let first_name = document.createElement("input");
+    nameDiv.appendChild(first_name);
+    first_name.id="student-edit-first-name"
+    first_name.placeholder = obj.first_name;
+
+    let last_name = document.createElement("input");
+    nameDiv.appendChild(last_name);
+    last_name.id="student-edit-last-name"
+    last_name.placeholder = obj.last_name;
+
+    let age = document.createElement("input");
+    secondDiv.appendChild(age);
+    age.id="student-edit-age"
+    age.type="number"
+    age.placeholder = obj.age;
+
+    let saveBtn = document.createElement("button");
+    saveBtn.classList.add("save-info-account-btn")
+    saveBtn.textContent="Save changes"
+    mainDiv.appendChild(saveBtn)
+
+
+    return mainDiv;
+}
+
+
+
+
+function editBookModal(obj){
+
+    
+
+    // book_name
+    // created_at
+
+    // main container
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("edit-book-modal");
+    mainDiv.id = obj.id
+
+
+    // div for buttons
+
+    let btnDiv = document.createElement("div");
+    btnDiv.id = "edit-book-modal-btn-div"
+    mainDiv.appendChild(btnDiv)
+
+    
+    
+    // save button
+    let editBtn = document.createElement("button");
+    editBtn.classList.add("edit-book-modal-save-btn") 
+    editBtn.textContent = "Save"
+    btnDiv.appendChild(editBtn)
+
+    // close button
+    let buyBtn = document.createElement("button");
+    buyBtn.classList.add("edit-book-modal-close-btn") 
+    buyBtn.textContent = "Close"
+    btnDiv.appendChild(buyBtn)
+
+
+    // delete button
+    let delBtn = document.createElement("button");
+    delBtn.textContent="Delete";
+    delBtn.classList.add("edit-book-modal-del-btn")
+    btnDiv.appendChild(delBtn)
+    
+
+    // info div 
+    let secondDiv = document.createElement("div");
+    secondDiv.classList.add("edit-book-modal-info-div")
+    mainDiv.appendChild(secondDiv)
+
+    let labelName = document.createElement("label");
+    labelName.textContent="New title";
+    secondDiv.appendChild(labelName)
+
+    let bookName = document.createElement("input");
+    secondDiv.appendChild(bookName);
+    bookName.id="edit-book-name"
+    bookName.placeholder =obj.book_name;
+
+
+    let labelAuthor = document.createElement("label");
+    labelAuthor.textContent="New author";
+    secondDiv.appendChild(labelAuthor)
+
+    let author = document.createElement("input");
+    secondDiv.appendChild(author);
+    author.id="edit-book-author"
+    author.placeholder =obj.author;
+
+    let labelDate = document.createElement("label");
+    labelDate.textContent="New date";
+    secondDiv.appendChild(labelDate)
+
+    let createdAt = document.createElement("input");
+    secondDiv.appendChild(createdAt);
+    createdAt.id="edit-book-creation-date"
+    createdAt.type="date";
+    createdAt.textContent ="Created at: "+ obj.created_at;
+
+    
+
+    return mainDiv;
 }
 
 
