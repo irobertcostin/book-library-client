@@ -72,8 +72,12 @@ main.addEventListener("click",async(e)=>{
     }else if(obj.classList.contains("extended-enrollment-modal-close-btn")){
         // console.log(obj)
         contentDiv.innerHTML="";
-        contentDiv.appendChild(divForEnrollments());
-        populateDivForEnrollments();
+        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+            contentDiv.appendChild(accountModal(userObj));
+            populateAccountEnrolls(userEnrolls);
+
+
+
     }else if(obj.classList.contains("extended-enrollment-modal-edit-btn")){
         // console.log(obj)
         
@@ -153,9 +157,9 @@ main.addEventListener("click",async(e)=>{
             
             let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
             contentDiv.appendChild(accountModal(userObj));
-            
-            document.querySelector(".sign-out-element-div").insertBefore(signedIdInfoLabel(userObj.email),document.querySelector(".sign-out-btn"))
             populateAccountEnrolls(userEnrolls);
+            document.querySelector(".sign-out-element-div").insertBefore(signedIdInfoLabel(userObj.email),document.querySelector(".sign-out-btn"))
+            
             
         }
         
@@ -220,12 +224,6 @@ main.addEventListener("click",async(e)=>{
 
         await editStudentApi(user,userObj.id)
 
-        contentDiv.innerHTML="";
-        userObj = await getStudentByEmail(loggedInStudent);
-        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
-        // console.log(userEnrolls)
-        contentDiv.appendChild(accountModal(userObj));
-        populateAccountEnrolls(userEnrolls);
 
     }else if(obj.classList.contains("book-modal-edit-btn")){
         
