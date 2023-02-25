@@ -228,14 +228,65 @@ main.addEventListener("click",async(e)=>{
         populateAccountEnrolls(userEnrolls);
 
     }else if(obj.classList.contains("book-modal-edit-btn")){
-        // console.log(obj.parentNode.parentNode);
+        
         let book = await getBookByIdApi(obj.parentNode.parentNode.id)
-        console.log(book)
+        
         contentDiv.innerHTML="";
         contentDiv.appendChild(editBookModal(book));
+
+    }else if(obj.classList.contains("edit-book-modal-save-btn")){
+
+
+            
+    let title = document.getElementById("edit-book-name").value;
+    let author = document.getElementById("edit-book-author").value;
+    let date = document.getElementById("edit-book-creation-date").value;
+
+    let editedBook = {
+        book_name:title,
+        created_at:date,
+        author:author
     }
 
-    
+    await editBookApi(editedBook,document.querySelector(".edit-book-modal").id)
+    }else if(obj.classList.contains("edit-book-modal-close-btn")){
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(divForBooks());
+        populateDivForBooks();
+    }
+    else if(obj.classList.contains("edit-book-modal-del-btn")){
+        
+        await deleteBook(document.querySelector(".edit-book-modal").id)
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(divForBooks());
+        populateDivForBooks();
+    } else if(obj.classList.contains("div-for-books-add-btn")){
+        
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(addNewBookModal());
+    }else if(obj.classList.contains("new-book-modal-add-btn")){
+        
+        
+        let title = document.getElementById("new-book-name").value;
+        let author = document.getElementById("new-book-author").value;
+        let date = document.getElementById("new-book-creation-date").value;
+
+        let book = {
+            book_name:title,
+            author:author,
+            date:date
+        }
+
+        await addBook(book)
+
+    }else if(obj.classList.contains("new-book-modal-close-btn")){
+        console.log(obj)
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(divForBooks());
+        populateDivForBooks();
+    }
+
+
 
 })
 

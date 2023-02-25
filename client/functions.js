@@ -88,6 +88,11 @@ function divForBooks(){
     label.textContent="Books"
     label.id="div-for-books-label"
     mainDiv.appendChild(label);
+
+    let addBtn = document.createElement("button");
+    addBtn.textContent="Add new title"
+    addBtn.classList.add("div-for-books-add-btn")
+    mainDiv.appendChild(addBtn);
     
     let secondDiv = document.createElement("div");
     secondDiv.classList.add("div-for-books-content")
@@ -120,17 +125,20 @@ function bookModal(obj){
     mainDiv.appendChild(btnDiv)
 
     
-    // // edit button
-    // let editBtn = document.createElement("button");
-    // editBtn.classList.add("book-modal-edit-btn") 
-    // editBtn.textContent = "Edit"
-    // btnDiv.appendChild(editBtn)
+    
 
     // buy button
     let buyBtn = document.createElement("button");
     buyBtn.classList.add("book-modal-edit-btn") 
     buyBtn.textContent = "Edit"
     btnDiv.appendChild(buyBtn)
+
+
+    // edit button
+    let editBtn = document.createElement("button");
+    editBtn.classList.add("book-modal-del-btn") 
+    editBtn.textContent = "Delete"
+    btnDiv.appendChild(editBtn)
 
 
     // delete button
@@ -848,6 +856,35 @@ function loginErrorMsg(error){
     return mainDiv;
 }
 
+function addBookErrorMsg(error){
+
+    
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("add-book-error");
+    mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+}
+function editBookErrorMsg(error){
+
+    
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("edit-book-error");
+    mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+}
+
 
 function removeLoginErrorMsg(){
 
@@ -856,6 +893,24 @@ function removeLoginErrorMsg(){
     modal.removeChild(err)
 
 }
+
+function removeAddBookErrorMsg(){
+
+    let err = document.querySelector(".add-book-error")
+    let modal = document.querySelector(".new-book-modal")
+    modal.removeChild(err)
+
+}
+
+function removeEditBookErrorMsg(){
+
+    let err = document.querySelector(".edit-book-error")
+    let modal = document.querySelector(".edit-book-modal")
+    modal.removeChild(err)
+
+}
+
+
 function signupErrorMsg(error){
 
     
@@ -1132,6 +1187,85 @@ function editBookModal(obj){
     createdAt.id="edit-book-creation-date"
     createdAt.type="date";
     createdAt.textContent ="Created at: "+ obj.created_at;
+
+    
+
+    return mainDiv;
+}
+
+function addNewBookModal(obj){
+
+    
+
+    // book_name
+    // created_at
+
+    // main container
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("new-book-modal");
+    // mainDiv.id = obj.id
+    let label = document.createElement("label");
+    label.classList.add("new-book-modal-add-label") 
+    label.textContent = "Add a new book to your stack"
+    mainDiv.appendChild(label)
+
+    // div for buttons
+
+    let btnDiv = document.createElement("div");
+    btnDiv.id = "new-book-modal-btn-div"
+    mainDiv.appendChild(btnDiv)
+
+    
+     // save button
+     let delBtn = document.createElement("button");
+     delBtn.textContent="Add";
+     delBtn.classList.add("new-book-modal-add-btn")
+     btnDiv.appendChild(delBtn)
+    
+
+    // close button
+    let buyBtn = document.createElement("button");
+    buyBtn.classList.add("new-book-modal-close-btn") 
+    buyBtn.textContent = "Close"
+    btnDiv.appendChild(buyBtn)
+
+
+   
+    
+
+    // info div 
+    let secondDiv = document.createElement("div");
+    secondDiv.classList.add("new-book-modal-info-div")
+    mainDiv.appendChild(secondDiv)
+
+    let labelName = document.createElement("label");
+    labelName.textContent="Title";
+    secondDiv.appendChild(labelName)
+
+    let bookName = document.createElement("input");
+    secondDiv.appendChild(bookName);
+    bookName.id="new-book-name"
+    // bookName.placeholder =obj.book_name;
+
+
+    let labelAuthor = document.createElement("label");
+    labelAuthor.textContent="Author";
+    secondDiv.appendChild(labelAuthor)
+
+    let author = document.createElement("input");
+    secondDiv.appendChild(author);
+    author.id="new-book-author"
+    // author.placeholder =obj.author;
+
+    let labelDate = document.createElement("label");
+    labelDate.textContent="Date";
+    secondDiv.appendChild(labelDate)
+
+    let createdAt = document.createElement("input");
+    secondDiv.appendChild(createdAt);
+    createdAt.id="new-book-creation-date"
+    createdAt.type="date";
+    createdAt.textContent ="Created at: "
 
     
 

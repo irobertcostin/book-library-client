@@ -192,9 +192,26 @@ async function addBook(book){
    try {
      // FETCH with url attribute , method POST and an object
      let data = await api("/books/add","POST",book)
-     return data.json()
+
+     if(data.status!=206){
+        
+
+        if(document.querySelector(".add-book-error")){
+            removeAddBookErrorMsg();
+            // document.querySelector(".new-book-modal").removeChild(document.querySelector(".login-error"))
+            // setTimeout(removeLoginErrorMsg(),3000) 
+        }
+        let response = await data.json();
+        // alert(response.error.message)
+        document.querySelector(".new-book-modal").appendChild(addBookErrorMsg(response.error.message))
+    }else {
+        alert("New title successfully added")
+
+    }
+
+    //  return data.json()
    } catch (error) {
-    console.log(error)
+    alert(error)
    }
 
 }
@@ -205,7 +222,8 @@ async function addCourse(course){
     try {
         // FETCH with url attribute , method POST and an object
     let data = await api("/courses/add","POST",course)
-    return data.json()
+        return data.json();
+
     } catch (error) {
         console.log(error)
     }
@@ -330,7 +348,7 @@ async function deleteBook(id){
 
         return data.json("Book successfully deleted");
     } catch (error) {
-        console.log(error)
+        alert(error)
     }
     
 }
@@ -393,16 +411,20 @@ async function editBookApi(book,id){
     // expect data with status , as build in the api
     if(data.status!=207){
 
+        if(document.querySelector(".edit-book-error")){
+            removeEditBookErrorMsg();
+        }
+
         // await the error message as a json object
         let response= await data.json();
         
-        alert(response.error.message)
-
+        // alert(response.error.message)
+        document.querySelector(".edit-book-modal").appendChild(editBookErrorMsg(response.error.message))
 
         
     } else if(data.status===207) {
 
-        console.log("Book edited successfully")
+        alert("Book edited successfully")
         // return data.json(car);
     }
     

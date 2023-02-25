@@ -1200,6 +1200,11 @@ box-shadow: 2px 2px 6px 2px #03ffff70; */
   align-items: center;
 }
 
+.div-for-books{
+  display: flex;
+  flex-direction: column;
+}
+
 .div-for-books-content {
   display: flex;
   flex-direction: row;
@@ -1574,6 +1579,38 @@ position: relative; */
   align-items: center;
 }
 
+.add-book-error {
+  min-width: 250px;
+  max-width: 400px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 30px;
+}
+
+.edit-book-error {
+  min-width: 250px;
+  max-width: 400px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin-top: 30px;
+}
+
 .sign-out-btn {
   display: block;
   margin-top: 0px;
@@ -1662,11 +1699,35 @@ position: relative; */
   align-self: center;
 }
 
+.div-for-books-add-btn{
+  border: 2px solid white;
+  color: #14B8A6;
+  padding: 5px;
+  /* padding-left: 50px; */
+  /* padding-right: 50px; */
+  text-align: center;
+  border-radius: 3px;
+  margin-top: 10px;
+  width: 50%;
+  max-width: 350px;
+  align-self: center;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
 .save-info-account-btn:hover{
   background-color: rgba(255, 255, 255, 0.551);
   padding: 5px;
   padding-left: 50px;
   padding-right: 50px;
+  color:#212a37;
+}
+
+.div-for-books-add-btn:hover{
+  background-color: rgba(255, 255, 255, 0.551);
+  padding: 5px;
+  /* padding-left: 50px;
+    padding-right: 50px; */
   color:#212a37;
 }
 
@@ -1728,7 +1789,7 @@ input {
   justify-content: center;
   padding: 50px;
   margin-top: 30px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 #edit-book-modal-btn-div{
@@ -1781,6 +1842,69 @@ input {
     justify-content: center;
     align-items: center;
 } */
+
+.new-book-modal{
+  width: 100%;
+  max-width: 500px;
+  background-color: #212a37;
+  color: #14B8A6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+#new-book-modal-btn-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+#new-book-modal-btn-div *{
+  background-color: #14B8A6;
+  color: white;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+#new-book-modal-btn-div button:hover{
+  background-color: rgb(6, 138, 138);
+  transition: 0.5s ease-in-out;
+}
+
+.new-book-modal-info-div{
+  /* border: 2px solid white; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.new-book-modal-info-div input {
+  font-size: 12px;
+  padding: 2px;
+  align-self: center;
+  margin-left: auto;
+  width: 140px;
+  color: black;
+  outline: none;
+}
+
+.new-book-modal-add-label{
+  color: white;
+}
 
 @media (min-width:700px) {
   #extended-enrollment-modal-btn-div {
