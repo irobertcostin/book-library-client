@@ -426,6 +426,8 @@ async function editBookApi(book,id){
 
         alert("Book edited successfully")
         // return data.json(car);
+
+        
     }
     
     }catch(e){
@@ -448,10 +450,16 @@ async function editStudentApi(user,id){
     // expect data with status , as build in the api
     if(data.status!=210){
 
+        if(document.querySelector(".edit-student-error")){
+            removeEditStudentErrorMsg();
+        }
+
         // await the error message as a json object
         let response= await data.json();
         
-        alert(response.error.message)
+        // alert(response.error.message)
+        document.querySelector(".student-modal-edit").insertBefore(editUserErrorMsg(response.error.message),document.querySelector(".save-info-account-btn"))
+
 
 
         
@@ -459,6 +467,11 @@ async function editStudentApi(user,id){
 
         alert("Account information edited successfully")
         // return data.json(car);
+        contentDiv.innerHTML="";
+        userObj = await getStudentByEmail(loggedInStudent);
+        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+        contentDiv.appendChild(accountModal(userObj));
+        populateAccountEnrolls(userEnrolls);
     }
     
     }catch(e){

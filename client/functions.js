@@ -885,6 +885,21 @@ function editBookErrorMsg(error){
     return mainDiv;
 }
 
+function editUserErrorMsg(error){
+
+    
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("edit-student-error");
+    mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+}
+
 
 function removeLoginErrorMsg(){
 
@@ -906,6 +921,14 @@ function removeEditBookErrorMsg(){
 
     let err = document.querySelector(".edit-book-error")
     let modal = document.querySelector(".edit-book-modal")
+    modal.removeChild(err)
+
+}
+
+function removeEditStudentErrorMsg(){
+
+    let err = document.querySelector(".edit-student-error")
+    let modal = document.querySelector(".student-modal-edit")
     modal.removeChild(err)
 
 }
@@ -1080,23 +1103,38 @@ function studentModalEdit(obj){
     secondDiv.classList.add("student-modal-edit-info-div")
     mainDiv.appendChild(secondDiv)
 
+   
+
     let nameDiv = document.createElement("div");
     nameDiv.classList.add("namediv-modal-edit-info-div")
     secondDiv.appendChild(nameDiv)
     // nameDiv.textContent="Name"
+
+    let labelName = document.createElement("label");
+    labelName.textContent="First name";
+    nameDiv.appendChild(labelName)
 
     let first_name = document.createElement("input");
     nameDiv.appendChild(first_name);
     first_name.id="student-edit-first-name"
     first_name.placeholder = obj.first_name;
 
+    let labelName2 = document.createElement("label");
+    labelName2.textContent="Last name";
+    nameDiv.appendChild(labelName2)
+
     let last_name = document.createElement("input");
     nameDiv.appendChild(last_name);
     last_name.id="student-edit-last-name"
     last_name.placeholder = obj.last_name;
 
+
+    let labelName3 = document.createElement("label");
+    labelName3.textContent="Age";
+    nameDiv.appendChild(labelName3)
+
     let age = document.createElement("input");
-    secondDiv.appendChild(age);
+    nameDiv.appendChild(age);
     age.id="student-edit-age"
     age.type="number"
     age.placeholder = obj.age;
