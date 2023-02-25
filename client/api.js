@@ -267,8 +267,17 @@ async function addStudent(student){
 
         if(data.status!=201){
 
+            if(document.querySelector(".signup-error")){
+                removeSignupErrorMsg();
+            
+            }
+
             let response = await data.json();
-            alert(response)
+
+            
+            // alert(response)
+            document.querySelector(".signup-modal").insertBefore(signupErrorMsg(response.error.message),document.querySelector(".signup-modal-signup-btn"))
+    
         }else {
             // bring in client
             alert("Successfully registered, please login")

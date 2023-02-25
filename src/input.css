@@ -912,7 +912,7 @@ position: relative; */
 
 .signup-modal-signup-btn {
     margin: 40px;
-    margin-top: 70px;
+    margin-top: 40px;
     background-color: #EF4444;
     color: rgb(255, 255, 255);
     padding: 2px;
@@ -991,6 +991,21 @@ position: relative; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.signup-error{
+    min-width: 250px;
+    max-width: 400px;
+    height: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 
