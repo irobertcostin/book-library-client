@@ -176,9 +176,22 @@ async function getEnrollmentByStudentsId(id){
 
     try {
         let data = await api(`/enrollments/by-student-id/id=${id}`)
-        return data.json();
+        // return data.json();
+
+        if(data.status!=230){
+            let response = await data.json();
+            console.log(response.error.message)
+            // console.log(response.error.message)
+            document.querySelector(".account-enrolls-modal-info-div").innerHTML=""
+            document.querySelector(".account-enrolls-modal-info-div").appendChild(noEnrollsErrorMsg(response.error.message))
+        }else {
+            return data.json();
+        }
+
+
     } catch (error) {
         console.log(error)
+        
     }
 
 

@@ -443,10 +443,10 @@ function createEnrollmentExtended(enrollment,student,course){
     mainDiv.appendChild(btnDiv)
 
     
-    let editBtn = document.createElement("button");
-    editBtn.classList.add("extended-enrollment-modal-edit-btn")
-    editBtn.textContent="Edit"
-    btnDiv.appendChild(editBtn)
+    // let editBtn = document.createElement("button");
+    // editBtn.classList.add("extended-enrollment-modal-edit-btn")
+    // editBtn.textContent="Edit"
+    // btnDiv.appendChild(editBtn)
 
 
     let close = document.createElement("button");
@@ -959,6 +959,30 @@ function removeSignupErrorMsg(){
 }
 
 
+function noEnrollsErrorMsg(error){
+
+    
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("no-enrolls-error");
+    // mainDiv.classList.add("animate-flicker")
+
+    let text = document.createElement("p");
+    text.textContent=error;
+    mainDiv.appendChild(text);
+
+
+    return mainDiv;
+}
+
+function removeNoEnrollsErrorMsg(){
+
+    let err = document.querySelector(".signup-error")
+    let modal = document.querySelector(".signup-modal")
+    modal.removeChild(err)
+
+}
+
+
 function signOutElement(){
 
     let mainDiv = document.createElement("div");
@@ -1067,12 +1091,21 @@ function populateAccountEnrolls(arr){
     
 
     let list = document.querySelector(".account-enrolls-modal-info-div")
-    for(let i =0;i<arr.length;i++){
 
-        list.appendChild(enrollmentModal(arr[i]))
+    if(arr.length>=1){
+        for(let i =0;i<arr.length;i++){
+
+            list.appendChild(enrollmentModal(arr[i]))
+        }
+    
+        return main;
+
+    }else{
+        console.log("test")
     }
 
-    return main;
+
+
 
 }
 
@@ -1310,6 +1343,15 @@ function addNewBookModal(obj){
     return mainDiv;
 }
 
+function enrollmentBtnLabel(){
+    let mainDiv = document.createElement("div");
+    mainDiv.classList.add("enroll-btn-label-manage");
+
+    let label = document.createElement("label");
+    label.textContent="You can manage your enrollments in your Account"
+    mainDiv.appendChild(label)
+    return mainDiv;
+}
 
 // function welcomeSignUp(user){
 //     let mainDiv = document.createElement("div");

@@ -52,8 +52,14 @@ main.addEventListener("click",async(e)=>{
         // console.log(obj.parentNode.parentNode.id)
         await deleteEnrollment(obj.parentNode.parentNode.id);
         contentDiv.innerHTML="";
-        contentDiv.appendChild(divForEnrollments());
-        populateDivForEnrollments();
+        contentDiv.appendChild(accountModal(userObj));
+        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+            
+            if(userEnrolls!=undefined){
+                populateAccountEnrolls(userEnrolls);
+            }
+            
+
         
     }else if(obj.classList.contains("enrollment-modal-details-btn")){
         // console.log(obj.parentNode.parentNode.id)
@@ -72,9 +78,14 @@ main.addEventListener("click",async(e)=>{
     }else if(obj.classList.contains("extended-enrollment-modal-close-btn")){
         // console.log(obj)
         contentDiv.innerHTML="";
+        contentDiv.appendChild(accountModal(userObj));
         let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
-            contentDiv.appendChild(accountModal(userObj));
-            populateAccountEnrolls(userEnrolls);
+            
+            if(userEnrolls!=undefined){
+
+                populateAccountEnrolls(userEnrolls);
+            }
+            
 
 
 
@@ -96,12 +107,12 @@ main.addEventListener("click",async(e)=>{
     }else if(obj.id=="signup-modal-reg-label"){
         contentDiv.innerHTML="";
         contentDiv.appendChild(createLoginMask());
-        console.log(obj)
+        
         
     }else if(obj.id=="login-modal-reg-label"){
         contentDiv.innerHTML="";
         contentDiv.appendChild(createSignupMask());
-        console.log(obj)
+        
     }else if(obj.classList.contains("login-modal-close-btn")){
         contentDiv.innerHTML="";
         contentDiv.appendChild(marketing())
@@ -155,9 +166,13 @@ main.addEventListener("click",async(e)=>{
             document.querySelector(".navbar-parent").appendChild(signOutElement());
             userObj = await getStudentByEmail(loggedInStudent);
             
-            let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+            
             contentDiv.appendChild(accountModal(userObj));
-            populateAccountEnrolls(userEnrolls);
+            let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+            if(userEnrolls!=undefined){
+
+                populateAccountEnrolls(userEnrolls);
+            }
             document.querySelector(".sign-out-element-div").insertBefore(signedIdInfoLabel(userObj.email),document.querySelector(".sign-out-btn"))
             
             
@@ -180,12 +195,15 @@ main.addEventListener("click",async(e)=>{
         contentDiv.innerHTML="";
         contentDiv.appendChild(accountModal(userObj));
         let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
-        // console.log(userEnrolls)
-        populateAccountEnrolls(userEnrolls);
+        
+        if(userEnrolls!=undefined){
+
+            populateAccountEnrolls(userEnrolls);
+        }
         
     }
 
-    else if(obj.classList.contains("course-modal-enroll-btn")){
+    else if(obj.classList.contains("course-modal-enroll-btn")&&obj.textContent!=="Enrolled"){
 
         let courseId=obj.parentNode.parentNode.id
         let userId=userObj.id;
@@ -200,6 +218,22 @@ main.addEventListener("click",async(e)=>{
         }
 
         await addEnrollments(enrollment);
+        contentDiv.innerHTML="";
+        contentDiv.appendChild(divForCourses());
+        populateDivForCourses()
+        let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+
+    
+    for(let i=0;i<userEnrolls.length;i++){
+        
+        document.getElementById(`${userEnrolls[i].course_id}`).firstElementChild.firstElementChild.textContent="Enrolled"
+        document.getElementById(`${userEnrolls[i].course_id}`).firstElementChild.firstElementChild.classList.add("enrolled-label")
+    }
+
+    document.querySelector(".div-for-courses").appendChild(enrollmentBtnLabel());
+
+        
+    
 
     } else if(obj.classList.contains("edit-account-info-btn")){
         contentDiv.innerHTML="";
@@ -211,9 +245,9 @@ main.addEventListener("click",async(e)=>{
         let age=+document.getElementById("student-edit-age").value;
 
 
-        console.log(first)
-        console.log(last)
-        console.log(age);
+        // console.log(first)
+        // console.log(last)
+        // console.log(age);
 
         let user = {
 
@@ -282,6 +316,22 @@ main.addEventListener("click",async(e)=>{
         contentDiv.innerHTML="";
         contentDiv.appendChild(divForBooks());
         populateDivForBooks();
+    }else if(obj.classList.contains("courses-btn")){
+
+    contentDiv.innerHTML="";
+    contentDiv.appendChild(divForCourses());
+    populateDivForCourses()
+    document.querySelector(".div-for-courses").appendChild(enrollmentBtnLabel());
+    userObj = await getStudentByEmail(loggedInStudent);
+    let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+            
+        if(userEnrolls!=undefined){
+            for(let i=0;i<userEnrolls.length;i++){
+        
+                document.getElementById(`${userEnrolls[i].course_id}`).firstElementChild.firstElementChild.textContent="Enrolled"
+                document.getElementById(`${userEnrolls[i].course_id}`).firstElementChild.firstElementChild.classList.add("enrolled-label")
+            }
+        }
     }
 
 
@@ -320,14 +370,33 @@ coursesBtn.addEventListener("click",async (e)=>{
 
     let obj=e.target;
 
+    userObj = await getStudentByEmail(loggedInStudent);
     let contentDiv = document.querySelector(".content-div");
-    contentDiv.innerHTML="";
-    contentDiv.appendChild(divForCourses());
-    populateDivForCourses()
+    
+    // console.log(userObj)
+    let userEnrolls= await getEnrollmentByStudentsId(userObj.id);
+
+    // let filledEnrolls=[];
+    // for(let i=0;i<userEnrolls.length;i++){
+
+    //     for(let j=0;j<courses.courses.length;j++){
+
+    //         if(userEnrolls[i].course_id===courses.courses[j].id){
+    //             filledEnrolls.push(courses.courses[j]);
+    //         }
+
+    //     }
+
+    // }
+    // console.log(filledEnrolls)
+    
+    
+
+    
 
 })
 
-enrollsBtn.addEventListener("click",(e)=>{
+enrollsBtn.addEventListener("click",async(e)=>{
 
     let obj=e.target;
 
@@ -335,6 +404,9 @@ enrollsBtn.addEventListener("click",(e)=>{
     contentDiv.innerHTML="";
     contentDiv.appendChild(divForEnrollments());
     populateDivForEnrollments()
+
+    
+
 
 })
         
