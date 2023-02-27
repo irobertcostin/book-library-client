@@ -1095,6 +1095,10 @@ box-shadow: 2px 2px 6px 2px #00ffff84; */
   overflow: hidden;
 }
 
+.hide{
+  /* display: none; */
+}
+
 .logo img {
   cursor: pointer;
 }
@@ -1699,14 +1703,29 @@ position: relative; */
   border: 2px solid white;
   width: 100%;
   color: white;
-  margin-top: 40px;
+  margin-top: 50px;
   gap: 20px;
   padding: 20px;
   display: flex;
-  flex-direction: column;
-  /* flex-wrap: wrap; */
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
+  position: relative;
+  padding-top:50px
+}
+
+.account-enrolls-modal-info-label{
+  position: absolute;
+  top: 0;
+  left: 40%;
+  margin-top: 10px;
+}
+
+.no-enrolls-error{
+  width: 100%;
+  text-align: center;
+  height: auto;
 }
 
 .account-enrolls-modal-list-div{
@@ -1816,6 +1835,21 @@ position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.enroll-btn-label-manage{
+  color: #8f9eb1ed;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  /* border: 2px solid red; */
+  margin-top: 30px;
+}
+
+.enrolled-label{
+  width:100%;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 .namediv-modal-edit-info-div input{
@@ -1973,6 +2007,12 @@ input {
     margin-bottom: 30px;
   }
 
+  .account-enrolls-modal-info-label{
+    /* position: absolute; */
+    /* top: 0; */
+    left: 45%;
+  }
+
   .extended-student-modal-info-div {
     grid-area: stu;
     /* min-height: 500px; */
@@ -2033,6 +2073,12 @@ input {
   .div-for-courses-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .account-enrolls-modal-info-label{
+    position: absolute;
+    top: 0;
+    left: 47%;
   }
 
   .div-for-enrollments-content {
