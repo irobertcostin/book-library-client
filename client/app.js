@@ -411,15 +411,11 @@ enrollsBtn.addEventListener("click",async(e)=>{
 })
         
 
-// add author to book modal 
-// add other info account in account modal
-
-
-// sign-up successfully to update
-// master account for course add and edit and data management through client
-// normal account with delete or enroll active 
-
-// landing page cu snap scroll 
+//so-far functionalities
+// GET,POST,PUT for Users 
+// GET,PUT,DELETE Enrollments at courses 
+// GET for courses
+// GET, POST, PUT, DELETE for books
 
 // cum putem ascunde parola din get user by ID 
 // mesaje logare user 
